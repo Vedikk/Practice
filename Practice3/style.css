@@ -1,0 +1,47 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: Neris_sb;
+    src: url(fonts/Neris-SemiBold.otf);
+}
+@font-face {
+    font-family: Neris;
+    src: url(fonts/Neris-Black.otf);
+}
+#main
+{
+    margin: 0 auto;
+}
+#header
+{
+    height: 600px;
+    background-image: url("img/header_bg.png");
+    background-size: cover;
+    color: white;
+}
+#logo
+{
+    font-family: Neris;
+    font-size: 24pt;
+    position: absolute;
+    text-align: left;
+    margin: 50px 0 0  110px ;
+}
+#logo strong
+{
+    text-decoration: none;
+    border-bottom: solid 4px #e8432e;
+}
+#descript
+{
+    position: absolute;
+    font-family: Neris_sb;
+    font-size: 40pt;
+    margin: 150px 0 0 110px;
+}
+
+
+

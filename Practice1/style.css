@@ -1,0 +1,392 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body
+{
+    margin: 0 auto;
+}
+@font-face {
+    font-family: Inconsolata regular;
+    src: url(fonts/Inconsolata.otf);
+}
+@font-face {
+    font-family: PlayfairDisplay-Black;
+    src: url(fonts/Playfair_Display/PlayfairDisplay-Black.ttf);
+}
+@font-face {
+    font-family: PlayfairDisplay-BlackItalic;
+    src: url(fonts/Playfair_Display/PlayfairDisplay-BlackItalic.ttf);
+}
+@font-face {
+    font-family: PlayfairDisplay-Bold;
+    src: url(fonts/Playfair_Display/PlayfairDisplay-Bold.ttf);
+}
+@font-face {
+    font-family: PlayfairDisplay-BoldItalic;
+    src: url(fonts/Playfair_Display/PlayfairDisplay-BoldItalic.ttf);
+}
+@font-face {
+    font-family: PlayfairDisplay-Italic;
+    src: url(fonts/Playfair_Display/PlayfairDisplay-Italic.ttf);
+}
+@font-face {
+    font-family: PlayfairDisplay-Regular;
+    src: url(fonts/Playfair_Display/PlayfairDisplay-Regular.ttf);
+}
+@font-face {
+    font-family: Ubuntu-Bold;
+    src: url(fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+@font-face {
+    font-family: Ubuntu-BoldItalic;
+    src: url(fonts/Ubuntu/Ubuntu-BoldItalic.ttf);
+}
+@font-face {
+    font-family: Ubuntu-Italic;
+    src: url(fonts/Ubuntu/Ubuntu-Italic.ttf);
+}
+@font-face {
+    font-family: Ubuntu-Light;
+    src: url(fonts/Ubuntu/Ubuntu-Light.ttf);
+}
+@font-face {
+    font-family: Ubuntu-LightItalic;
+    src: url(fonts/Ubuntu/Ubuntu-LightItalic.ttf);
+}
+@font-face {
+    font-family: Ubuntu-Medium;
+    src: url(fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+@font-face {
+    font-family: Ubuntu-MediumItalic;
+    src: url(fonts/Ubuntu/Ubuntu-MediumItalic.ttf);
+}
+@font-face {
+    font-family: Ubuntu-Regular;
+    src: url(fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+body
+{
+    background-color: white;
+
+    color: #626262;
+
+}
+.header
+{
+    margin-left: 70px;
+    margin-top: 60px;
+
+    height: 130px;
+    display: block;
+}
+#name
+{
+    display: inline-block;
+    font-family: "Inconsolata regular";
+    font-size: 30pt;
+}
+#name:hover
+{
+    font-size:  35pt;
+}
+
+#header_list
+{
+
+    margin-top: 10px;
+    position: inherit;
+    display: inline-block;
+
+    list-style: none;
+
+}
+#header_list li
+{
+    margin-left: 100px;
+    display: inline-block;
+}
+#header_list li a
+{
+    color: #626262;
+    text-decoration: none;
+    color: black;
+    font-family: PlayfairDisplay-Regular;
+    font-size: 14pt;
+}
+#bigImg img
+{
+    width: 1063px;
+    height: 509px;
+}
+#photodiary
+{
+    margin: 100px auto 0 auto ;
+    width: 900px;
+
+}
+#photodiary h5
+{
+    color: #b4ad9e;
+    font-family: Ubuntu-Light;
+}
+#photodiary h1
+{
+    margin-top: 30px;
+    font-family: PlayfairDisplay-Regular;
+}
+#photodiary p
+{
+    margin-top: 35px;
+    font-family:PlayfairDisplay-Regular;
+}
+#leaveComment
+{
+    position: relative;
+    margin-top: 50px;
+
+}
+#leaveComment h5
+{
+    color: #b4ad9e;
+    font-family: Ubuntu-Light;
+}
+#lifestyleCont
+{
+    margin-top: 130px;
+}
+#lifestyleCont h5
+{
+    margin-top: 35px;
+    color: #b4ad9e;
+    font-family: Ubuntu-Light;
+}
+#lifestyleCont h1
+{
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-family: PlayfairDisplay-Regular;
+}
+#lifestyleLeft
+{
+    display: inline-block;
+    width: 420px;
+}
+#lifestyleLeft p
+{
+    font-family: PlayfairDisplay-Regular;
+    font-size: 14pt;
+}
+#lifestyleRight
+{
+    margin-left: 65px;
+    display: inline-block;
+    width: 420px;
+}
+#lifestyleRight p
+{
+    font-family: PlayfairDisplay-Regular;
+    font-size: 14pt;
+}
+#diaryCont
+{
+    margin-top: 130px;
+}
+#diaryCont h5
+{
+    margin-top: 35px;
+    color: #b4ad9e;
+    font-family: Ubuntu-Light;
+}
+#diaryCont h1
+{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-family: PlayfairDisplay-Regular;
+}
+#diaryLeft
+{
+    display: inline-block;
+    width: 420px;
+}
+#diaryLeft p
+{
+    font-family: PlayfairDisplay-Regular;
+    font-size: 14pt;
+}
+#diaryRight
+{
+    margin-left: 65px;
+    display: inline-block;
+    width: 420px;
+}
+#diaryRight p
+{
+    font-family: PlayfairDisplay-Regular;
+    font-size: 14pt;
+}
+#newsletter
+{
+    margin-top: 130px;
+    position: absolute;
+    height: 290px;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+#newsletter h1
+{
+    font-family: PlayfairDisplay-Regular;
+    margin-top: 73px;
+    text-align: center;
+
+}
+#email
+{
+    position: absolute;
+    margin-top: 80px;
+    width: 380px;
+    margin-left: 490px;
+    border-bottom: solid black 1px;
+}
+
+#inputEmail
+{
+    display: inline-block;
+    font-family: PlayfairDisplay-Regular;
+    font-size: 14pt;
+    border: 0;
+    background-color: #f0f0f0;
+    width: 350px;
+}
+#emailButton
+{
+    margin-left: -4px;
+    outline: none;
+    border: 0px;
+    background-color: #f0f0f0;
+
+}
+#emailButton:hover
+{
+    background-color: #626262 ;
+    border-radius: 7px;
+}
+#inputEmail:focus
+{
+    outline: 0px;
+}
+
+#lifestyleCont2
+{
+    margin-top: 520px;
+}
+#lifestyleCont2 h5
+{
+    margin-top: 35px;
+    color: #b4ad9e;
+    font-family: Ubuntu-Light;
+}
+#lifestyleCont2 h1
+{
+    font-size: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    font-family: PlayfairDisplay-Regular;
+}
+#loadMore
+{
+    margin: 165px auto;
+    font-family: PlayfairDisplay-Regular;
+    height: 60px;
+    width: 165px;
+    border: solid black 1px;
+    text-align: center;
+
+}
+#loadMore a
+{
+    display: block;
+    height: 100%;
+    line-height: 4em;
+    text-decoration: none;
+    color: inherit;
+}
+footer
+{
+    height: 100px;
+    width: 100%;
+    background-color: #f0f0f0;
+    position: absolute;
+    margin-top: 200px;
+}
+footer a
+{
+    color: inherit;
+    text-decoration: none;
+    font-family: PlayfairDisplay-Regular;
+    line-height: 6em;
+    height: 6em;
+}
+#privacy
+{
+    position: relative;
+    margin-left: 20px;
+    float: left;
+
+}
+#terms
+{
+    position: relative;
+    margin-left: 150px;
+    float: left;
+}
+#follow
+{
+    position: relative;
+    float: right;
+    margin-right: 170px;
+}
+#social
+{
+    margin-top: 40px;
+    margin-right: -150px;
+
+    height: 18px;
+    width: 78px;
+    float: right;
+}
+.socialIcon
+{
+    width: 20px;
+    height: 17px;
+    background: url("images/social.png") no-repeat;
+    display: inline-block;
+}
+.facebook
+{
+    width: 15px;
+    background-position: 0 0;
+}
+.twitter
+{
+    background-position: -27px 0;
+}
+.instagram
+{
+    background-position: -62px 0;
+}
+
+
+
+
+
+
+
+
+
