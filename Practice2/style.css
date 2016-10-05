@@ -418,7 +418,7 @@ hr{
     width: 200px;
     vertical-align: middle;
 }
-#input
+.input
 {
     display: inline-block;
     height: 30px;
@@ -428,7 +428,7 @@ hr{
     border-style: ridge;
     color: white;
 }
-#input img
+.input img
 {
     height: 10px;
     margin-top: 4px;
@@ -538,16 +538,16 @@ hr{
     background: url("images/social_icon_foot.png") no-repeat;
     display: inline-block;
 }
-.facebook
+.facebook_foot
 {
     width: 33px;
     background-position: 0 0;
 }
-.twitter
+.twitter_foot
 {
     background-position: -48px 0;
 }
-.gplus
+.gplus_foot
 {
     background-position: -96px 0;
 }
