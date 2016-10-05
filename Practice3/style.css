@@ -17,6 +17,7 @@
 }
 #header
 {
+    width: 100%;
     height: 600px;
     background-image: url("img/header_bg.png");
     background-size: cover;
@@ -42,6 +43,28 @@
     font-size: 40pt;
     margin: 150px 0 0 110px;
 }
+#arrow_down
+{
+    display: inline-block;
+    position: absolute;
+    margin: 460px 0 0 110px;
+    height: 50px;
+    width: 50px;
+    border: solid 2px white;
+    border-radius: 25px;
+}
+#button_desc
+{
+    margin: 475px 0 0 180px;
+    position: absolute;
+    font-family: Neris_sb;
+    font-size: 16pt;
+}
+#under_header
+{
 
-
-
+    color: #e8432e;
+    width: 100%;
+    position: absolute;
+    margin: 1000px 0 0  ;
+}
