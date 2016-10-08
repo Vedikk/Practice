@@ -6,8 +6,12 @@
     <title>Kingdom</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js"></script>
+    <script type="text/javascript" src="modernizr.custom.28468.js"></script>
     <script src="jquery-1.11.1.js"></script>
     <script type="text/javascript">$(document).ready(function(){$('a[href*=#]').bind('click',function(e){e.preventDefault();var target=$(this).attr("href");$('html, body').stop().animate({scrollTop:$(target).offset().top},500,function(){location.hash=target;});return false;});});</script>
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="nojs.css" />
+    </noscript>
 </head>
 <body>
     <div id="main">
@@ -30,6 +34,48 @@
                 <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam</p>
             </div>
         </div>
+        <div id="da-slider" class="da-slider">
+            <div class="da-slide">
+                <h2>Featured work.</h2>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Digital Agency Web design/Fontend  Development Totam rem aperiam</p>
+                <a href="#" class="da-link">Leave contacs</a>
+                <div class="da-img"><img src="img/1.png" alt="image01" /></div>
+            </div>
+            <div class="da-slide">
+                <h2>Featured work.</h2>
+                <p>Kreative Web design Totam rem aperiam, eaque ipsa quae ab illo. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet </p>
+                <a href="#" class="da-link">Leave contacs</a>
+                <div class="da-img"><img src="img/2.png" alt="image01" /></div>
+            </div>
+            <div class="da-slide">
+                <h2>Featured work.</h2>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet. Right here we’ve got something you gonna love!  Sed ut perspici.</p>
+                <a href="#" class="da-link">Leave contacs</a>
+                <div class="da-img"><img src="img/3.png" alt="image01" /></div>
+            </div>
+            <div class="da-slide">
+                <h2>Featured work.</h2>
+                <p>Voluptatem accusantium doloremque laudantium, totam rem aperiam. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet</p>
+                <a href="#" class="da-link">Leave contacs</a>
+                <div class="da-img"><img src="img/4.png" alt="image01" /></div>
+            </div>
+            <nav class="da-arrows">
+                <span class="da-arrows-prev"></span>
+                <span class="da-arrows-next"></span>
+            </nav>
+        </div>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery.cslider.js"></script>
+        <script type="text/javascript">
+            $(function() {
+
+                $('#da-slider').cslider({
+                    autoplay	: true,
+                    bgincrement	: 450
+                });
+
+            });
+        </script>
     </div>
 
 </body>
