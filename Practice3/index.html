@@ -12,13 +12,25 @@
     <noscript>
         <link rel="stylesheet" type="text/css" href="nojs.css" />
     </noscript>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.cslider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+
+            $('#da-slider').cslider({
+                autoplay	: true,
+                bgincrement	: 450
+            });
+
+        });
+    </script>
 </head>
 <body>
     <div id="main">
         <div id="header">
             <p id="logo">my.kingdom</p>
             <p id="descript">We make<br>websites and apps<br> that you'll love to<br> have.</p>
-            <a id="arrow_down" href="#" ><img src="img/arrow_dwn.png"></a>
+            <a id="arrow_down" href="#under_header" ><img src="img/arrow_dwn.png"></a>
             <p id="button_desc">see what i have done so far</p>
         </div>
         <hr id="under_header">
@@ -64,18 +76,8 @@
                 <span class="da-arrows-next"></span>
             </nav>
         </div>
-        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-        <script type="text/javascript" src="jquery.cslider.js"></script>
-        <script type="text/javascript">
-            $(function() {
 
-                $('#da-slider').cslider({
-                    autoplay	: true,
-                    bgincrement	: 450
-                });
 
-            });
-        </script>
     </div>
 
 </body>
