@@ -102,6 +102,17 @@
 {
     margin: 20px 10px 0 400px;
 }
+.welcome a
+{
+    text-decoration: none;
+    font-family: Neris_light;
+    color: black;
+    font-size: 12pt;
+}
+.welcome a:hover
+{
+    color: #e8432e;
+}
 #description
 {
     font-family: Neris_thin !important;
@@ -119,6 +130,10 @@
     width: 200px;
     display: inline-block;
     vertical-align: top;
+}
+#welcome_arrow
+{
+    margin: 100px 0 0 110px ;
 }
 /*Slider*/
 .da-slider{
@@ -822,8 +837,8 @@
 /*Slider*/
 .vid_banner
 {
-    align-items: center;
-    margin: -30px 0 ;
+    text-align: center;
+    margin: -30px 0 0 ;
     width: 100%;
     height: 400px;
     background: url("img/vid_banner1.png");
@@ -833,13 +848,16 @@
 {
     background: url("img/vid_banner2.png");
 }
+
 .vid_banner img
 {
-    margin-top: 100px;
+    margin: 100px 0 20px;
     position: relative;
 }
 .vid_banner p
 {
 
     font-family: Neris_thin;
+    font-size: 24pt;
+    color: white;
 }
