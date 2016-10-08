@@ -886,9 +886,43 @@
 {
     margin: 70px 0 0 110px;
     font-family: Neris;
-
 }
 .contacts h2:first-letter{
     border: none;
     border-bottom: solid 4px #e8432e;
+}
+.contacts_cont
+{
+    margin: 60px 0 0 110px;
+    height: 200px;
+    overflow: hidden;
+
+}
+#left_cont
+{
+    float: left;
+    width: 250px;
+    display: inline-block;
+}
+#left_cont h3
+{
+    font-family: Neris_light;
+
+}
+#left_cont p
+{
+    margin: 20px 0 0 0;
+    font-family: Neris_thin;
+    font-size: 10pt;
+    color:gray;
+}
+#right_cont
+{
+    float: left;
+    width: 600px;
+    display: inline-block;
+}
+#right_cont h4
+{
+    font-family: Neris;
 }
