@@ -895,7 +895,7 @@
 {
     margin: 60px 0 0 110px;
     height: 200px;
-    overflow: hidden;
+
 
 }
 #left_cont
@@ -916,13 +916,112 @@
     font-size: 10pt;
     color:gray;
 }
+.social_icon_hor
+{
+
+    width: 27px;
+    height: 27px;
+    background: url("img/social_hor.png") no-repeat;
+    display: inline-block;
+}
+.twitter_hor
+{
+    background-position: 0 0;
+}
+.dribble_hor
+{
+    background-position: -46px 0;
+}
+.behance_hor
+{
+    background-position: -92px 0;
+}
+.forrst_hor
+{
+    background-position: -142px 0;
+}
+.gplus_hor
+{
+    background-position: -185px 0;
+}
+.facebook_hor
+{
+    background-position: -222px 0;
+}
 #right_cont
 {
     float: left;
-    width: 600px;
+    width: 550px;
     display: inline-block;
 }
 #right_cont h4
 {
     font-family: Neris;
+}
+.small_input
+{
+    outline: none;
+    height: 50px;
+    width: 250px;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid gray ;
+}
+.large_input
+{
+    outline: none;
+    height: 50px;
+    width: 505px;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid gray ;
+}
+input:last-child
+{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    float: right;
+    margin: 10px 50px 0 0 ;
+    font-family: Neris_light;
+    background: url("img/send_icon.png") no-repeat left;
+}
+#social_ver
+{
+    width: 30px;
+    float: right;
+    margin-right: 400px ;
+}
+.social_icon_ver
+{
+    width: 27px;
+    height: 27px;
+    background: url("img/social_ver.png") no-repeat;
+    display: inline-block;
+}
+.behance_ver
+{
+    background-position: 0 0;
+}
+.twitter_ver
+{
+    background-position: 0 -42px;
+}
+.dribble_ver
+{
+    background-position: 0 -83px;
+}
+
+.forrst_ver
+{
+    background-position: 0 -127px;
+}
+.gplus_ver
+{
+    background-position: 0 -173px;
+}
+.facebook_ver
+{
+    background-position: 0 -207px;
 }
