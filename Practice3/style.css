@@ -861,3 +861,34 @@
     font-size: 24pt;
     color: white;
 }
+.vid_banner p:hover
+{
+    font-family: Neris_sb;
+    color: #e8432e;
+}
+.ps
+{
+    text-align: center;
+    display: flex;
+    height: 300px;
+    background: url("img/ps_bg.png");
+    align-items: center;
+    color: white;
+    font-family: Neris_thin;
+    font-size: 16pt;
+}
+.contacts
+{
+    height: 700px;
+    width: 100%;
+}
+.contacts h2
+{
+    margin: 70px 0 0 110px;
+    font-family: Neris;
+
+}
+.contacts h2:first-letter{
+    border: none;
+    border-bottom: solid 4px #e8432e;
+}
