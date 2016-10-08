@@ -820,4 +820,26 @@
     100%{ left: -50%; opacity: 0; }
 }
 /*Slider*/
+.vid_banner
+{
+    align-items: center;
+    margin: -30px 0 ;
+    width: 100%;
+    height: 400px;
+    background: url("img/vid_banner1.png");
 
+}
+.vid_banner:hover
+{
+    background: url("img/vid_banner2.png");
+}
+.vid_banner img
+{
+    margin-top: 100px;
+    position: relative;
+}
+.vid_banner p
+{
+
+    font-family: Neris_thin;
+}
