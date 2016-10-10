@@ -6,6 +6,17 @@
 .main_color
 {
     color: #a6a7b0;
+    font-weight: bold;
+}
+.right
+{
+    display: inline-block;
+    float: right;
+}
+.left
+{
+    display: inline-block;
+    float: left;
 }
 a:hover
 {
@@ -42,7 +53,6 @@ h3
 }
 .header p
 {
-    font-weight: bold;
     color: white;
     position: relative;
     top: 40%;
@@ -56,11 +66,7 @@ h3
     color: white;
 }
 
-header p a
-{
-    text-decoration: none;
 
-}
 .padding
 {
     padding: 30px;
@@ -78,6 +84,7 @@ header p a
 }
 .details
 {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +93,38 @@ header p a
     height: 35px;
     width: 80px;
 }
-.large
+.border_bott
 {
     border-bottom: 1px solid #eaeaea;
 }
+.small_itm
+{
+    background: white;
+}
+
+.ads
+{
+    background: white;
+}
+.ads div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 45px;
+    background-color: #dedede;
+    height: 180px;
+}
+.ads p
+{
+    font-size: 18pt;
+    font-weight: bold;
+    color: #b4b4b4;
+}
+.blog
+{
+    background: white;
+}
+
+
+
