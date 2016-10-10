@@ -125,6 +125,61 @@ h3
 {
     background: white;
 }
+.social_div
+{
+    background: #dedede;
+}
+.social
+{
+    margin-top: 15px;
+}
+.socialIcon
+{
+    width: 35px;
+    height: 35px;
+    background: url("../img/social.png") no-repeat;
+    display: inline-block;
+}
+.twitter
+{
+    background-position: 0 0 ;
+}
+.facebook
+{
+    background-position: -44px 0;
+}
+.rss
+{
+    background-position: -89px 0;
+}
+.pinterest
+{
+    background-position: -132px 0;
+}
+.gplus
+{
+    background-position: -171px 0;
+}
+.dribbble
+{
+    background-position: -220px 0;
+}
+.linkedin
+{
+    background-position: -264px 0;
+}
+.flickr
+{
+    background-position: -308px 0;
+}
+.footer
+{
+    background: #53545e;
+}
+.footer a
+{
+    text-decoration: none;
+}
 
 
 
