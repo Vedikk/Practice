@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+.main_bg
+{
+    background-color: #53545e;
+}
+.main_color
+{
+    color: #a6a7b0;
+}
+.back
+{
+    width: 100%;
+    height: 150px;
+    background: #e1e1e1;
+}
+.header
+{
+    font-family: 'Open Sans', sans-serif;
+    background: #53545e;
+    height: 150px;
+}
+.logo
+{
+    position: relative;
+    top: 30%;
+    float: left;
+}
+.header p
+{
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 40%;
+    float: right;
+}
+.logo span
+{
+    margin-left: 18px;
+    vertical-align: middle;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30pt;
+    color: white;
+}
+
+header p a
+{
+    text-decoration: none;
+
+}
