@@ -1,0 +1,47 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+h1
+{
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+}
+h5
+{
+    font-family: 'Open Sans', sans-serif;
+}
+body
+{
+    background: #292c34;
+    height: 500px;
+}
+.header
+{
+    padding-left: 5%;
+    padding-top: 20px;
+    height: 90px;
+    background: #24242c;
+}
+.large_div
+{
+    padding-top: 10%;
+    text-align: center;
+    background-size: cover;
+    background: url("../img/big_pic.png");
+    height: 450px;
+}
+.large_div a
+{
+    margin-top: 20px;
+    padding-top: 4px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background: #5e5e5e;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+a:hover
+{
+    text-decoration: none;
+}
