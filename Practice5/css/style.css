@@ -13,14 +13,7 @@ a
 {
     text-decoration: none;
 }
-.left
-{
-    float: left;
-}
-.right
-{
-    float: right;
-}
+
 .lora
 {
     font-family: Lora;
@@ -68,12 +61,12 @@ body
 .large_div a
 {
     margin-top: 20px;
-    padding-top: 4px;
+    padding-top: 8px;
     font-family: 'Open Sans', sans-serif;
     color: white;
     display: inline-block;
-    width: 100px;
-    height: 30px;
+    width: 120px;
+    height: 40px;
     background: #5e5e5e;
     border: 1px solid white;
     border-radius: 10px;
@@ -91,6 +84,7 @@ a:hover
 .slider{
 
     width: 640px; /*Same as width of the large image*/
+
     position: relative;
     /*Instead of height we will use padding*/
     padding-top: 320px; /*That helps bring the labels down*/
@@ -192,4 +186,5 @@ On click the images will be displayed at normal size to complete the effect
     font-family: Lora;
     color: #ffb600;
 }
+
 
