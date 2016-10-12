@@ -9,6 +9,14 @@
     font-family: 'Lora';
     src: url("../fonts/Lora-Italic.ttf");
 }
+.left
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
 .lora
 {
     font-family: Lora;
@@ -21,7 +29,7 @@ h4
 }
 h1
 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: Lora;
     color: white;
 }
 h5
@@ -152,5 +160,24 @@ a:hover
 {
     margin-top: 10px;
 }
-
+.contacts
+{
+    background: #24242c;
+    text-align: center;
+}
+.contacts h3
+{
+    color: white;
+}
+.contacts a
+{
+    font-size: 14pt;
+    text-decoration: none;
+}
+.contacts a:hover
+{
+    text-decoration: none;
+    font-family: Lora;
+    color: #ffb600;
+}
 
