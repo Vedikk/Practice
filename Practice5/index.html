@@ -11,6 +11,22 @@
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="modernizr.custom.28468.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">$(document).ready(function () {
+        $('a[href*=#]').bind('click', function (e) {
+            e.preventDefault();
+            var target = $(this).attr("href");
+            $('html, body').stop().animate({scrollTop: $(target).offset().top}, 500, function () {
+                location.hash = target;
+            });
+            return false;
+        });
+    });</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/autoadvance.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 <div class="wrapper">
@@ -28,8 +44,35 @@
             </div>
         </div>
         <div class="row">
-            <div class=" col-md-8 col-md-offset-2">
-
+            <div id="slideshow" class=" col-md-8 col-md-offset-2">
+                <ul class="slides">
+                    <li><img src="img/photos/1.jpg" alt="Marsa Alam underawter close up"/></li>
+                    <li><img src="img/photos/2.jpg" alt="Turrimetta Beach - Dawn"/></li>
+                    <li><img src="img/photos/3.jpg" alt="Power Station"/></li>
+                    <li><img src="img/photos/4.jpg" alt="Colors of Nature"/></li>
+                </ul>
+                <span class="arrow previous"></span>
+                <span class="arrow next"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class=" feature_head col-md-8 col-md-offset-2 ft_bg">
+                <h1>Почему <strong class="lora">лучше</strong> у нас?</h1>
+                <hr width="100">
+            </div>
+        </div>
+        <div class="row ">
+            <div class=" ft_bg feature col-md-2 col-sm-offset-2 ft_bg">
+                    <img src="img/feature_1.png">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, perferendis?</p>
+            </div>
+            <div class=" ft_bg feature col-md-2  ft_bg">
+                <img src="img/feature_2.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, perferendis?</p>
+            </div>
+            <div class=" ft_bg feature col-md-2  ">
+                <img src="img/feature_3.png">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, perferendis?</p>
             </div>
         </div>
     </div>
