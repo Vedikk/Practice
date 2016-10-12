@@ -14,6 +14,11 @@
     font-family: Lora;
     color: #ffb600;
 }
+h4
+{
+    color: white;
+    display: inline-block;
+}
 h1
 {
     font-family: 'Open Sans', sans-serif;
@@ -34,6 +39,11 @@ body
     padding-top: 20px;
     height: 90px;
     background: #24242c;
+}
+.header img
+{
+    height: 60px;
+    display: inline-block;
 }
 .large_div
 {
@@ -118,7 +128,10 @@ a:hover
 
 
 /* The following styles are only used for the styling of the demo page */
-
+.feature_head
+{
+    height: 100%;
+}
 .feature_head h1
 {
     text-align: center;
@@ -131,7 +144,13 @@ a:hover
 }
 .feature
 {
+    text-align: center;
     color: white;
     display: inline-block;
 }
+.feature p
+{
+    margin-top: 10px;
+}
+
 
