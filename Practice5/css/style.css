@@ -186,5 +186,46 @@ On click the images will be displayed at normal size to complete the effect
     font-family: Lora;
     color: #ffb600;
 }
+.sml_examples
+{
 
+    padding: 0;
+    text-align: center;
+    display: block;
+    background: #47474e;
+}
+.sml_examples>div
+{
+    margin-top: 10px;
+    border: 1px solid #d58512;
+}
+#ex_1
+{
+    margin-top: 0;
+    background: url("../img/photos/1.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 320px;
+}
+#ex_2
+{
+    background: url("../img/photos/2.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 320px;
+}
+#ex_3
+{
+    background: url("../img/photos/3.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 320px;
+}
+#ex_4
+{
+    background: url("../img/photos/4.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 320px;
+}
 
