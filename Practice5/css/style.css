@@ -57,20 +57,9 @@ body
     background-size: cover;
     background: url("../img/big_pic.png");
     height: 450px;
-}
-.large_div a
-{
-    margin-top: 20px;
-    padding-top: 8px;
-    font-family: 'Open Sans', sans-serif;
     color: white;
-    display: inline-block;
-    width: 120px;
-    height: 40px;
-    background: #5e5e5e;
-    border: 1px solid white;
-    border-radius: 10px;
 }
+
 a:hover
 {
     text-decoration: none;
