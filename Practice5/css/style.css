@@ -217,4 +217,8 @@ On click the images will be displayed at normal size to complete the effect
     background-size: cover;
     height: 320px;
 }
+#vk
+{
+    display: inline-block;
 
+}
