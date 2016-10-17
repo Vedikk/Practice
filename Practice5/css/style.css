@@ -54,7 +54,7 @@ body
 {
     padding-top: 10%;
     text-align: center;
-    background-size: cover;
+    background-size: cover ;
     background: url("../img/big_pic.png");
     height: 450px;
     color: white;
@@ -219,6 +219,23 @@ On click the images will be displayed at normal size to complete the effect
 }
 #vk
 {
+    position: relative;
+    bottom: -5px;
+    background: url("../img/vk_logo.png");
+    background-position: 0 0;
+    width: 25px;
+    height: 25px;
     display: inline-block;
-
+    color: #8c8c8c;
+}
+#vk:hover
+{
+    background: url("../img/vk_logo.png");
+    background-position: -30px 0;
+    cursor: pointer;
+}
+#vk:active
+{
+    background: url("../img/vk_logo.png");
+    background-position: -30px 0;
 }
