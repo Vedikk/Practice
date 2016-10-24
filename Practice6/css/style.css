@@ -1,0 +1,118 @@
+@font-face {
+    src: url('../fonts/MyriadPro-Regular.otf');
+    font-family: 'MyriadPro_regular';
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15pt;
+    color: #c7c7c7;
+}
+.head_plus_block{
+    background: url("../img/main_bg.png");
+    height: 684px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.header{
+    height: 100px;
+}
+#logo{
+    position: relative;
+    top: 22%;
+}
+.nav{
+    padding-top: 2%;
+
+}
+#menu{
+    list-style: none;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    border-right:  solid 1px #d9d9d9;
+}
+#menu li{
+    text-decoration: none;
+    display: inherit;
+    margin-right: 30px;
+}
+#menu a{
+    color: #a6a6a6;
+    text-decoration: none;
+}
+#menu a:hover{
+    color: #ffb812 ;
+}
+.head_buttons{
+    padding: 0;
+    margin-top: 2%;
+    height: 20px;
+    margin-left: 20px;
+}
+#proceed_button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 1.5%;
+    text-align: center;
+    background: #ffb812;
+    height: 40px;
+    width: 150px;
+    margin-left: 30px;
+    display: inline-block;
+    border-radius: 20px;
+}
+.left_cont{
+    padding-top: 5%;
+}
+.left_cont p{
+    margin: 60px 0;
+}
+/*Button check out*/
+a.check_out {
+    font-family: 'MyriadPro_regular', sans-serif;
+    font-weight: bold;
+    font-size: 13pt;
+    color: #c4c4c4;
+    width: 220px;
+    display: block;
+    text-shadow: 1px 1px #fff;
+    text-decoration: none;
+    padding: .3em 1em;
+    border: 2px solid #ffb812;
+    border-radius: 100px;
+    outline: none;
+    background: transparent;
+    overflow: hidden;
+}
+a.check_out:after {
+    content: ">";
+    position: relative;
+    display: inline-block;
+    margin-left: 1.4em;
+    font-family: 'Montserrat', sans-serif;
+    color: #c4c4c4;
+}
+a.check_out:hover {
+    background-color: #ffb812;
+    color: white;
+}
+a.check_out:hover:after {
+    background-color: #ffb812;
+    color: white;
+}
+/**/
+
+
+
+
+
