@@ -10,9 +10,17 @@ h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+h4{
+    font-family: 'Montserrat', sans-serif;
+
+}
 p{
     font-family: 'Open Sans', sans-serif;
-    font-size: 15pt;
+    font-size: 12pt;
     color: #c7c7c7;
 }
 .head_plus_block{
@@ -33,23 +41,23 @@ p{
     padding-top: 2%;
 
 }
-#menu{
+menu{
     list-style: none;
     display: inline-block;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     border-right:  solid 1px #d9d9d9;
 }
-#menu li{
+menu li{
     text-decoration: none;
     display: inherit;
     margin-right: 30px;
 }
-#menu a{
+menu a{
     color: #a6a6a6;
     text-decoration: none;
 }
-#menu a:hover{
+menu a:hover{
     color: #ffb812 ;
 }
 .head_buttons{
@@ -85,7 +93,6 @@ a.check_out {
     color: #c4c4c4;
     width: 220px;
     display: block;
-    text-shadow: 1px 1px #fff;
     text-decoration: none;
     padding: .3em 1em;
     border: 2px solid #ffb812;
@@ -111,6 +118,50 @@ a.check_out:hover:after {
     color: white;
 }
 /**/
+
+.right_cont{
+    padding-top: 5%;
+}
+/*Bottom*/
+.bottom{
+    margin-top: 150px;
+    background: #ffffff;
+}
+.bottom_first, .bottom_second{
+    height: 500px;
+}
+.fa-bott{
+    margin: 25px 20px 0 0;
+    font-size: 45px !important;
+    color: #FFB812;
+    float: left;
+}
+.bottom *{
+   display: inline-block;
+}
+#bolt p,
+#bolt h4{
+    margin-left: 31px;
+}
+#brush, #cube{
+    padding-top: 40px;
+}
+#cube h4,
+#cube p{
+    margin-left: 10px !important;
+}
+.bottom_third{
+    margin-top: -20px;
+}
+.bottom_third span,
+.bottom_third a{
+    margin: 15px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.bottom_third a{
+    color: #FFB812;
+}
 
 
 
