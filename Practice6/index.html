@@ -11,7 +11,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <script src="js/wow.min.js"></script>
-    <script src="js/script.js"></script>
+    <script rel="script" src="js/script.js"></script>
     <link rel="stylesheet" href="css/animate.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -24,7 +24,7 @@
             <div class="col-sm-2 col-sm-offset-1" id="logo">
                 <img class="img-responsive" src="img/logo.png" alt="logo_img">
             </div>
-            <div class="col-lg-7 col-lg-offset-2 nav visible-lg">
+            <div class="col-lg-8 col-lg-offset-1 nav visible-lg">
                 <menu>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -32,7 +32,11 @@
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Sign Up</a></li>
                 </menu>
-                <i style="margin-left: 30px;" class="fa fa-search"></i>
+                <div id="search">
+                    <input type="text"  name="q" placeholder="Search">
+                    <input type="submit" value="" onclick="fadeOut()">
+                </div>
+                <a href="#" id="fa-search" onclick="fadeIn()"><i style="margin-left: 30px;" class="fa fa-search"></i></a>
                 <a href="#">
                     <div id="proceed_button">
                         <span>PROCEED TO</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -54,7 +58,7 @@
             </div>
         </div>
         <div class="row bottom">
-            <div class="col-sm-3 col-sm-offset-1 bottom_first">
+            <div class="col-lg-3 col-lg-offset-1 bottom_first">
                 <div>
                     <i class="fa fa-slack fa-bott" aria-hidden="true"></i>
 
@@ -78,9 +82,9 @@
                     </p>
                 </div>
             </div>
-            <div class="col-sm-3 bottom_second">
+            <div class="col-lg-3 bottom_second">
                 <div id="bolt">
-                    <i class="fa fa-bolt fa-bott" aria-hidden="true"></i>
+                    <i class="fa fa-bolt fa-bott" aria-hidden="true" style="width: 40px;"></i>
                     <h4>LIGHTENING-FAST</h4>
                     <p>
                         These Nike Air Jordan Sneakers<br/>
@@ -89,7 +93,7 @@
                     </p>
                 </div>
                 <div id="cube">
-                    <i class="fa fa-cube fa-bott" aria-hidden="true"></i>
+                    <i class="fa fa-cube fa-bott" aria-hidden="true" ></i>
                     <h4>IN-A-BOX SOLUTION</h4>
                     <p>
                         These Nike Air Jordan Sneakers<br/>
@@ -98,7 +102,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-sm-3 bottom_third">
+            <div class="col-lg-3 bottom_third">
                 <h2>Baseline Shopping<br/> Experience 20/80</h2>
                 <span>WRITTEN BY &#160 </span><a href="#"> JANE COLEMAN</a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor asip incididunt ut

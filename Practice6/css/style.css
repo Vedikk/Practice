@@ -2,71 +2,115 @@
     src: url('../fonts/MyriadPro-Regular.otf');
     font-family: 'MyriadPro_regular';
 }
-body{
+@keyframes display_on {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+@keyframes display_off {
+    from{opacity: 1}
+    to{opacity: 0}
+}
+body {
     margin: 0;
     padding: 0;
 }
-h1{
+
+h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
-h2{
+
+h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
-h4{
+
+h4 {
     font-family: 'Montserrat', sans-serif;
 
 }
-p{
+
+p {
     font-family: 'Open Sans', sans-serif;
     font-size: 12pt;
     color: #c7c7c7;
 }
-.head_plus_block{
+
+.head_plus_block {
     background: url("../img/main_bg.png");
     height: 684px;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
 }
-.header{
+
+.header {
     height: 100px;
 }
-#logo{
+
+#logo {
     position: relative;
     top: 22%;
 }
-.nav{
+
+.nav {
     padding-top: 2%;
 
 }
-menu{
+
+menu {
     list-style: none;
     display: inline-block;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    border-right:  solid 1px #d9d9d9;
+    border-right: solid 1px #d9d9d9;
 }
-menu li{
+
+menu li {
     text-decoration: none;
     display: inherit;
     margin-right: 30px;
 }
-menu a{
+
+menu a {
     color: #a6a6a6;
     text-decoration: none;
 }
-menu a:hover{
-    color: #ffb812 ;
+
+menu a:hover {
+    color: #ffb812;
 }
-.head_buttons{
+
+.head_buttons {
     padding: 0;
     margin-top: 2%;
     height: 20px;
     margin-left: 20px;
 }
-#proceed_button{
+/*hidden input*/
+#search {
+    display: none;
+    width: 145px;
+    min-height: 10px;
+    border: 2px solid #ffb812;
+    border-radius: 2px;
+}
+input[type="text"] {
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    width: 115px;
+    vertical-align: middle;
+    background: #f4f4f4;
+}
+input[type="submit"] {
+    background: url("../img/search.png") center no-repeat;
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+/**/
+#proceed_button {
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #ffffff;
@@ -79,19 +123,27 @@ menu a:hover{
     display: inline-block;
     border-radius: 20px;
 }
-.left_cont{
+#proceed_button:hover{
+    transition: all 0.3s ease;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.left_cont {
     padding-top: 5%;
 }
-.left_cont p{
+
+.left_cont p {
     margin: 60px 0;
 }
+
 /*Button check out*/
 a.check_out {
     font-family: 'MyriadPro_regular', sans-serif;
     font-weight: bold;
     font-size: 13pt;
     color: #c4c4c4;
-    width: 220px;
+    width: 180px;
     display: block;
     text-decoration: none;
     padding: .3em 1em;
@@ -100,66 +152,65 @@ a.check_out {
     outline: none;
     background: transparent;
     overflow: hidden;
+    transition: all 0.3s ease;
+
 }
-a.check_out:after {
-    content: ">";
-    position: relative;
-    display: inline-block;
-    margin-left: 1.4em;
-    font-family: 'Montserrat', sans-serif;
-    color: #c4c4c4;
-}
+
 a.check_out:hover {
     background-color: #ffb812;
     color: white;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
-a.check_out:hover:after {
-    background-color: #ffb812;
-    color: white;
-}
+
 /**/
 
-.right_cont{
+.right_cont {
     padding-top: 5%;
 }
+
 /*Bottom*/
-.bottom{
+.bottom {
     margin-top: 150px;
     background: #ffffff;
 }
-.bottom_first, .bottom_second{
-    height: 500px;
-}
-.fa-bott{
-    margin: 25px 20px 0 0;
-    font-size: 45px !important;
+
+.fa-bott {
+    position: relative;
+    margin: 20px 20px 0 0;
+    font-size: 50px !important;
     color: #FFB812;
     float: left;
 }
-.bottom *{
-   display: inline-block;
-}
-#bolt p,
-#bolt h4{
-    margin-left: 31px;
-}
-#brush, #cube{
+
+#brush, #cube {
     padding-top: 40px;
 }
+.bottom_first p{
+    padding-left: 66px;
+}
+.bottom_second p{
+    padding-left: 60px;
+}
 #cube h4,
-#cube p{
+#cube p {
     margin-left: 10px !important;
 }
-.bottom_third{
+
+.bottom_third {
     margin-top: -20px;
+    width: 350px;
 }
+
 .bottom_third span,
-.bottom_third a{
-    margin: 15px 0;
+.bottom_third a {
+    margin: 20px 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
 }
-.bottom_third a{
+
+.bottom_third a {
     color: #FFB812;
 }
 
