@@ -85,31 +85,38 @@ menu a:hover {
 #search {
     display: none;
     width: 143px;
-    min-height: 9px;
     border: 2px solid #ffb812;
     border-radius: 2px;
+    height: 30px;
 }
 
-input[type="text"] {
+#search> input[type="text"] {
+    position: relative;
+    top: -3px;
     border: none;
     outline: none;
     -webkit-appearance: none;
     width: 115px;
-    vertical-align: middle;
     background: #f4f4f4;
 }
 
-input[type="submit"] {
-    background: url("../img/search.png") center no-repeat #5e5e5e;
+#search> input[type="submit"] {
+    position: relative;
+    top: 4px;
+    background: url("../img/search.png") center no-repeat #f4f4f4;
     border: none;
+    width: 20px;
 }
 
 /*Hidden menu*/
 .fa-bars {
+    font-size: 30px !important;
+}
+#bars {
+    z-index: 999;
     position: fixed;
     top: 20px;
-    right: 0;
-    font-size: 30px !important;
+    right: 10px;
 }
 
 #drop_menu {
@@ -163,7 +170,7 @@ input[type="submit"] {
     border-radius: 2px;
 }
 
-input[type="text"] {
+#search_mob> input[type="text"] {
     border: none;
     outline: none;
     -webkit-appearance: none;
@@ -172,10 +179,11 @@ input[type="text"] {
     background: #c9c9c9;
 }
 
-input[type="submit"] {
+#search_mob> input[type="submit"] {
     background: url("../img/search.png") #c9c9c9 center no-repeat;
-    width: 20px;
-    height: 20px;
+    position: relative;
+    width: 24px;
+    height: 25px;
     border: none;
 }
 
@@ -186,10 +194,10 @@ input[type="submit"] {
 
 /*--------------------*/
 .proceed_button {
+    padding-top: 1%;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     color: #ffffff;
-    padding: 1.5%;
     text-align: center;
     background: #ffb812;
     height: 40px;
@@ -251,6 +259,7 @@ a.check_out:hover {
 .bottom {
     margin-top: 150px;
     background: #ffffff;
+    height: 8000px;
 }
 
 .fa-bott {

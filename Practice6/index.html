@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>REWORK</title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -10,8 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-    <script src="js/wow.min.js"></script>
     <script rel="script" src="js/script.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <link rel="stylesheet" href="css/animate.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -20,14 +23,14 @@
 <body>
 <div class="wrapper">
     <div class="container-fluid head_plus_block">
-        /*HEAD*/
+        <!-- HEAD -->
         <div class="row header">
             <div class="col-sm-2 col-sm-offset-1" id="logo">
                 <img class="img-responsive" src="img/logo.png" alt="logo_img">
             </div>
             <div class="col-lg-8 col-lg-offset-1 nav visible-lg">
                 <menu>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Blog</a></li>
@@ -38,13 +41,13 @@
                     <input type="submit" value="" onclick="fadeOut()">
                 </div>
                 <a href="#" id="fa-search" onclick="fadeIn()"><i style="margin-left: 30px;" class="fa fa-search"></i></a>
-                <a href="#">
+                <a href="#" class="wow fadeIn" data-wow-duration="2s">
                     <div class="proceed_button">
                         <span>PROCEED TO</span> <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                     </div>
                 </a>
             </div>
-            <a href="#" id="bars"><i class="fa fa-bars hidden-lg pull-right" aria-hidden="true" onclick="rightIn()"></i></a>
+            <a href="#" id="bars" ><i class="fa fa-bars hidden-lg wow rubberBand" aria-hidden="true" onclick="rightIn()" data-wow-duration="1s"></i></a>
             <div class="col-xs-10 hidden-lg" id="drop_menu">
                <a href="#" ><i class="fa fa-times" aria-hidden="true" onclick="rightOut()"></i></a>
                 <ul id="menu_vertical">
@@ -63,22 +66,24 @@
                 </div>
             </div>
         </div>
+        <!-- Main cont -->
         <div class="row">
             <div class="col-sm-5 col-sm-offset-1 left_cont">
-                <h1>Air Baloons at<br/> Best Prices.</h1>
+                <h1 class="wow fadeInLeft" data-wow-delay="0">Air Baloons at<br/> Best Prices.</h1>
 
-                <p>Lorem ipsum dolor sit amet, consectetur<br/>
+                <p class="wow fadeInLeft " data-wow-delay="0.4s"> Lorem ipsum dolor sit amet, consectetur<br/>
                     adipiscing elit, sed do eiusmod tempor<br/>
                     asip incididunt ut labore dui.</p>
-                <a href="#" class="check_out">CHECK OUT NOW</a>
+                <a href="#" class="check_out wow fadeInLeft" data-wow-delay="0.8s">CHECK OUT NOW</a>
             </div>
-            <div class="col-sm-5 right_cont hidden-xs">
-                <img class="img-responsive" src="img/right_cont_img.png">
+            <div class="col-sm-5 right_cont hidden-xs img-responsive wow fadeIn " data-wow-duration="2s">
+                <img src="img/right_cont_img.png" alt="balloons" >
             </div>
         </div>
+        <!-- Bottom blocks -->
         <div class="row bottom">
-            <div class="col-lg-3 col-lg-offset-1 bottom_first">
-                <div>
+            <div class="col-lg-3 col-lg-offset-1 bottom_first ">
+                <div class="wow fadeInDown">
                     <i class="fa fa-slack fa-bott" aria-hidden="true"></i>
 
                     <h4>HASH FEATURES</h4>
@@ -89,7 +94,7 @@
                         Jordan Sneakers.
                     </p>
                 </div>
-                <div id="brush">
+                <div id="brush" class="wow fadeInUp">
                     <i class="fa fa-paint-brush fa-bott" aria-hidden="true"></i>
 
                     <h4>BRUSH FEATURES</h4>
@@ -102,7 +107,7 @@
                 </div>
             </div>
             <div class="col-lg-3 bottom_second">
-                <div id="bolt">
+                <div id="bolt" class="wow fadeInDown">
                     <i class="fa fa-bolt fa-bott" aria-hidden="true" style="width: 40px;"></i>
                     <h4>LIGHTENING-FAST</h4>
                     <p>
@@ -111,7 +116,7 @@
                         Jordan Sneakers.
                     </p>
                 </div>
-                <div id="cube">
+                <div id="cube" class="wow fadeInUp">
                     <i class="fa fa-cube fa-bott" aria-hidden="true" ></i>
                     <h4>IN-A-BOX SOLUTION</h4>
                     <p>
@@ -121,7 +126,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-3 bottom_third">
+            <div class="col-lg-3 bottom_third wow zoomIn" >
                 <h2>Baseline Shopping<br/> Experience 20/80</h2>
                 <span>WRITTEN BY &#160 </span><a href="#"> JANE COLEMAN</a>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor asip incididunt ut
@@ -132,5 +137,8 @@
         </div>
     </div>
 </div>
+<script >
+    new WOW().init();
+</script>
 </body>
 </html>
