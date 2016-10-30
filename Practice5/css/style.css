@@ -52,11 +52,11 @@ body
 }
 .large_div
 {
-    padding-top: 10%;
+    padding-top: 12%;
     text-align: center;
+    background: url("../img/big_pic.png") ;
     background-size: cover ;
-    background: url("../img/big_pic.png");
-    height: 450px;
+    height: 500px;
     color: white;
 }
 
@@ -71,7 +71,7 @@ a:hover
     background: #47474e;
 }
 #slider {
-    width: 550px;
+    width: 700px;
     margin: 30px auto 0;
     position: relative;
 }
@@ -91,8 +91,8 @@ a:hover
 .page {float: left; ;}
 .page img
 {
-    width: 550px;
-    height: 413px;
+    width: 700px;
+    height: 503px;
     border-radius: 20px;
 }
 
@@ -102,7 +102,7 @@ a:hover
 #controls {
     position: absolute;
     width:100%;
-    top: 180px;
+    top: 235px;
     left: 0;
     height: 50px;
 }
