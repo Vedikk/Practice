@@ -70,66 +70,120 @@ a:hover
     text-align: center;
     background: #47474e;
 }
-.slider{
-
-    width: 640px; /*Same as width of the large image*/
-
+#slider {
+    width: 550px;
+    margin: 30px auto 0;
     position: relative;
-    /*Instead of height we will use padding*/
-    padding-top: 320px; /*That helps bring the labels down*/
-    margin: 10px auto;
-    /*Lets add a shadow*/
-    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+#slides {
+    background: #47474e;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.inner {width: 500%;}
+.inner:after {
+    content:'';
+    display: block;
+    height: 0;
+    clear:both;
+}
+.page {float: left; ;}
+.page img
+{
+    width: 550px;
+    height: 413px;
+    border-radius: 20px;
 }
 
+#overflow {overflow: hidden;}
+#slider input {display: none;}
 
-/*Last thing remaining is to add transitions*/
-.slider>img{
+#controls {
     position: absolute;
-    left: 0; top: 0;
-    transition: all 0.5s;
+    width:100%;
+    top: 180px;
+    left: 0;
+    height: 50px;
 }
 
-.slider input[name='slide_switch'] {
+#controls label {
     display: none;
-}
-
-.slider label {
-    /*Lets add some spacing for the thumbnails*/
-    margin: 18px 0 0 18px;
-    border: 3px solid #999;
-
-    float: left;
+    opacity: 0.3;
     cursor: pointer;
-    transition: all 0.5s;
-
-    /*Default style = low opacity*/
-    opacity: 0.6;
 }
-
-.slider label img{
+#controls label:hover {
+    opacity: 0.8;
+}
+/* sliding imgs */
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(1) {
+    /* arrow right*/
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 20px solid white;
+    border-bottom: 20px solid transparent;
+    float: right; /*right corner*/
+    margin-right:-30px; /* out of block */
     display: block;
 }
-
-/*Time to add the click effects*/
-.slider input[name='slide_switch']:checked+label {
-    border-color: #666;
-    opacity: 1;
-}
-/*Clicking any thumbnail now should change its opacity(style)*/
-/*Time to work on the main images*/
-.slider input[name='slide_switch'] ~ img {
-    opacity: 0;
-    transform: scale(1.1);
-}
-/*That hides all main images at a 110% size
-On click the images will be displayed at normal size to complete the effect
-*/
-.slider input[name='slide_switch']:checked+label+img {
-    opacity: 1;
-    transform: scale(1);
+#slide1:checked ~ #controls label:nth-child(5),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3),
+#slide5:checked ~ #controls label:nth-child(4) {
+    /*left arrow*/
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  white;
+    float: left;
+    display: block;
+    margin-left: -27px;
 }
 
+#slide1:checked ~ #slides .inner { margin-left:0;}
+#slide2:checked ~ #slides .inner { margin-left:-100%;}
+#slide3:checked ~ #slides .inner { margin-left:-200%;}
+#slide4:checked ~ #slides .inner { margin-left:-300%;}
+#slide5:checked ~ #slides .inner { margin-left:-400%;}
+
+/*points bottom*/
+#active {
+    text-align: center;
+    margin-top: 10px;
+}
+#active label {
+    width: 15px;
+    height:10px;
+    background: #ccc;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+}
+#active label:hover {
+    background: #999;
+}
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3),
+#slide4:checked ~ #active label:nth-child(4),
+#slide5:checked ~ #active label:nth-child(5) { background: #333;}
+
+#slides .inner {
+    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    -ms-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+}
 /* slider */
 .feature_head
 {
