@@ -81,7 +81,6 @@ body
 {
     margin-left: 70px;
     margin-top: 60px;
-
     height: 130px;
     display: block;
 }
@@ -90,6 +89,7 @@ body
     display: inline-block;
     font-family: "Inconsolata regular";
     font-size: 30pt;
+    transition: all 0.5s ease; 
 }
 #name:hover
 {
@@ -307,7 +307,12 @@ body
     width: 165px;
     border: solid black 1px;
     text-align: center;
+    transition: all 0.5s ease;
 
+}
+#loadMore:hover{
+    background: #ccc;
+    border: solid 1px #ccc;
 }
 #loadMore a
 {
