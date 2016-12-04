@@ -29,6 +29,13 @@ h1
     font-family: Lora;
     color: white;
 }
+h2
+{
+    text-align: center;
+    font-family: Lora;
+    color: white;
+    margin-bottom:20px;
+}
 h5
 {
     font-family: 'Open Sans', sans-serif;
@@ -65,135 +72,40 @@ a:hover
     text-decoration: none;
 }
 /*slider*/
-#slideshow
-{
+#slideshow {
+    background: #9d9d9d;
+    padding-bottom: 20px;
+
+}
+#slideshow img{
+    max-height: 550px;
+    max-width: 100%;
+}
+.owlNavigation{
     text-align: center;
-    background: #47474e;
-}
-#slider {
-    width: 700px;
-    margin: 30px auto 0;
-    position: relative;
-}
-#slides {
-    background: #47474e;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-}
-.inner {width: 500%;}
-.inner:after {
-    content:'';
-    display: block;
-    height: 0;
-    clear:both;
-}
-.page {float: left; ;}
-.page img
-{
-    width: 700px;
-    height: 503px;
-    border-radius: 20px;
-}
-
-#overflow {overflow: hidden;}
-#slider input {display: none;}
-
-#controls {
-    position: absolute;
-    width:100%;
-    top: 235px;
-    left: 0;
-    height: 50px;
-}
-
-#controls label {
-    display: none;
-    opacity: 0.3;
-    cursor: pointer;
-}
-#controls label:hover {
-    opacity: 0.8;
-}
-/* sliding imgs */
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(4),
-#slide4:checked ~ #controls label:nth-child(5),
-#slide5:checked ~ #controls label:nth-child(1) {
-    /* arrow right*/
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-left: 20px solid white;
-    border-bottom: 20px solid transparent;
-    float: right; /*right corner*/
-    margin-right:-30px; /* out of block */
-    display: block;
-}
-#slide1:checked ~ #controls label:nth-child(5),
-#slide2:checked ~ #controls label:nth-child(1),
-#slide3:checked ~ #controls label:nth-child(2),
-#slide4:checked ~ #controls label:nth-child(3),
-#slide5:checked ~ #controls label:nth-child(4) {
-    /*left arrow*/
-    width: 0;
-    height: 0;
-    border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent;
-    border-right: 20px solid  white;
-    float: left;
-    display: block;
-    margin-left: -27px;
-}
-
-#slide1:checked ~ #slides .inner { margin-left:0;}
-#slide2:checked ~ #slides .inner { margin-left:-100%;}
-#slide3:checked ~ #slides .inner { margin-left:-200%;}
-#slide4:checked ~ #slides .inner { margin-left:-300%;}
-#slide5:checked ~ #slides .inner { margin-left:-400%;}
-
-/*points bottom*/
-#active {
-    text-align: center;
-    margin-top: 10px;
-}
-#active label {
-    width: 15px;
-    height:10px;
-    background: #ccc;
+    color: #000;
+    height: 20px;
+    width: 20px;
     display: inline-block;
-    cursor: pointer;
-    border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
 }
-#active label:hover {
-    background: #999;
+.owlNavigation a{
+    display: inline-block;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-#slide1:checked ~ #active label:nth-child(1),
-#slide2:checked ~ #active label:nth-child(2),
-#slide3:checked ~ #active label:nth-child(3),
-#slide4:checked ~ #active label:nth-child(4),
-#slide5:checked ~ #active label:nth-child(5) { background: #333;}
-
-#slides .inner {
-    transition: all 0.8s ease-in-out;
-    -webkit-transition: all 0.8s ease-in-out;
-    -moz-transition: all 0.8s ease-in-out;
-    -ms-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-}
-/* slider */
+/* /slider */
 .feature_head
 {
     height: 100%;
 }
-.feature_head h1
+.feature_head h2
 {
     text-align: center;
     font-family: Lora;
-    
 }
 .ft_bg
 {
@@ -241,35 +153,6 @@ a:hover
 {
     margin-top: 10px;
     border: 1px solid #d58512;
-}
-#ex_1
-{
-    margin-top: 0;
-    background: url("../img/photos/1.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    height: 320px;
-}
-#ex_2
-{
-    background: url("../img/photos/2.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    height: 320px;
-}
-#ex_3
-{
-    background: url("../img/photos/3.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    height: 320px;
-}
-#ex_4
-{
-    background: url("../img/photos/4.jpg");
-    -webkit-background-size: cover;
-    background-size: cover;
-    height: 320px;
 }
 #vk
 {

@@ -1,0 +1,187 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+.main_bg
+{
+    background-color: #53545e;
+}
+.main_color
+{
+    color: #a6a7b0;
+    font-weight: bold;
+}
+.right
+{
+    display: inline-block;
+    float: right;
+}
+.left
+{
+    display: inline-block;
+    float: left;
+}
+a:hover
+{
+    text-decoration: none;
+    color: white;
+}
+body
+{
+    font-family: 'Open Sans', sans-serif;
+    background: #f1f1f1;
+}
+h3
+{
+    font-weight: bold;
+    color: #53545e;
+}
+.back
+{
+    width: 100%;
+    height: 150px;
+    background: #e1e1e1;
+}
+.header
+{
+
+    background: #53545e;
+    height: 150px;
+}
+.logo
+{
+    position: relative;
+    top: 30%;
+    float: left;
+}
+.header p
+{
+    color: white;
+    position: relative;
+    top: 40%;
+    float: right;
+}
+.logo span
+{
+    margin-left: 18px;
+    vertical-align: middle;
+    font-size: 30pt;
+    color: white;
+}
+
+
+.padding
+{
+    padding: 30px;
+}
+.large
+{
+    background: white;
+}
+.large_img
+{
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-image: url("../img/large_img.png");
+}
+.details
+{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    height: 35px;
+    width: 80px;
+}
+.border_bott
+{
+    border-bottom: 1px solid #eaeaea;
+}
+.small_itm
+{
+    background: white;
+}
+
+.ads
+{
+    background: white;
+}
+.ads div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 10px 45px;
+    background-color: #dedede;
+    height: 180px;
+}
+.ads p
+{
+    font-size: 18pt;
+    font-weight: bold;
+    color: #b4b4b4;
+}
+.blog
+{
+    background: white;
+}
+.social_div
+{
+    background: #dedede;
+}
+.social
+{
+    margin-top: 15px;
+}
+.socialIcon
+{
+    width: 35px;
+    height: 35px;
+    background: url("../img/social.png") no-repeat;
+    display: inline-block;
+}
+.twitter
+{
+    background-position: 0 0 ;
+}
+.facebook
+{
+    background-position: -44px 0;
+}
+.rss
+{
+    background-position: -89px 0;
+}
+.pinterest
+{
+    background-position: -132px 0;
+}
+.gplus
+{
+    background-position: -171px 0;
+}
+.dribbble
+{
+    background-position: -220px 0;
+}
+.linkedin
+{
+    background-position: -264px 0;
+}
+.flickr
+{
+    background-position: -308px 0;
+}
+.footer
+{
+    background: #53545e;
+}
+.footer a
+{
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
