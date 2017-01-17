@@ -1,0 +1,49 @@
+@import "http://webfonts.ru/import/oswald.css";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    height: 50px;
+    padding: 2% 0;
+    box-sizing: content-box;
+}
+.logo{
+    line-height: 50px;
+    font-family: Oswald, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+.logo>a{
+    text-decoration: none;
+    color: #000;
+    transition: .5s all ease;
+}
+.nav{
+    text-align: right;
+}
+.nav>a{
+    margin-left: 15px;
+    text-decoration: none;
+    line-height: 50px;
+    color: #000;
+    font-family: Oswald, sans-serif;
+    font-size: 1.2em;
+    transition: .5s all ease;
+}
+.nav>a:hover,
+.logo>a:hover{
+    color: #e1ccb9;
+}
+.top-slider{
+    background: url("../img/main_bg_big.jpg") center;
+    background-size: cover;
+    min-height: 550px;
+    padding-top: 5%;
+}
+.inner-box{
+    width: 400px;
+    height: 400px;
+    background-color: rgba(186, 186, 186, 0.7);
+}
