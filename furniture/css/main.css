@@ -1,50 +1,64 @@
 @import "http://webfonts.ru/import/oswald.css";
 
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: Oswald, sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: none;
 }
-.header{
+p{
+    text-indent: 25px;
+}
+/****************/
+/*HEADER*/
+.header {
     height: 40px;
     padding: 2% 0;
     box-sizing: content-box;
 }
-.logo{
+
+.logo {
     line-height: 40px;
     font-size: 2em;
     font-weight: bold;
 }
-.logo>a{
+
+.logo > a {
     color: #000;
 }
-.nav{
+
+.nav {
     text-align: right;
 }
-.nav>a{
+
+.nav > a {
     margin-left: 15px;
     line-height: 40px;
     color: #000;
     font-size: 1.2em;
 }
-.nav>a:hover,
-.logo>a:hover,
-.inner-box-logo:hover{
+
+.nav > a:hover,
+.logo > a:hover,
+.inner-box-logo:hover {
     color: #e1ccb9;
 }
-.top-slider{
+/*TOP SLIDER*/
+.top-slider {
     background: url("../img/main_bg_big.jpg") center;
     background-size: cover;
     min-height: 550px;
     padding-top: 5%;
 }
-.inner-box{
+
+.inner-box {
     width: 400px;
     height: 400px;
     background-color: rgba(50, 50, 50, 0.8);
@@ -52,51 +66,73 @@ a:hover{
     padding-top: 90px;
     text-align: center;
 }
-.inner-box-logo{
+
+.inner-box-logo {
     display: block;
     font-size: 6em;
     color: #fff;
 }
-.inner-box>h1{
+
+.inner-box > h1 {
     margin-top: 0;
     color: #ffffff;
     font-size: 1.8em;
 }
-.fa-arrow-circle-down{
+
+.fa-arrow-circle-down {
     color: #fff;
     font-size: 3em;
 }
-.about{
-    padding-top: 30px;
-    height: 600px;
+/*ABOUT*/
+.about {
+    padding: 30px;
+    height:auto;
+    min-height: 870px;
     background-color: #F2EFED;
 }
-.about>h2,
-.left-about>h3,
-.right-about>h3{
-    margin-top: 0;
+
+.about > h2 {
+    margin-top: 20px;
     text-align: center;
     margin-bottom: 25px;
 }
-.about>h2:before,
-.left-about>h3:before,
-.right-about>h3:before{
+
+.about > h2:before {
     margin-right: 20px;
     display: inline-block;
     content: "";
-    width:10%;
-    border-bottom:solid #000000 1px;
+    width: 10%;
+    border-bottom: solid #000000 1px;
     vertical-align: middle;
 }
-.about>h2:after,
-.left-about>h3:after,
-.right-about>h3:after{
+
+.about > h2:after {
     margin-left: 20px;
     display: inline-block;
     content: "";
-    width:10%;
-    border-bottom:solid #000000 1px;
+    width: 10%;
+    border-bottom: solid #000000 1px;
     vertical-align: middle;
+}
+
+.about>p{
+    margin: 0 auto;
+    text-align: justify;
+    max-width: 800px;
+    font-size: 1.5em;
+}
+
+/*FEATURES*/
+
+.feature{
+    text-align: center;
+}
+.feature-fa{
+    font-size: 3em;
+    margin: 30px 0;
+}
+.feature>p{
+    font-size: 1.4em;
 }
 
 
