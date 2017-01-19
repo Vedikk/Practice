@@ -1,10 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b1a4d354-7a6e-4e5a-9026-d556bfc7a72b" name="Default" comment="">
+    <list default="true" id="b1a4d354-7a6e-4e5a-9026-d556bfc7a72b" name="Default" comment="added 'gallery', fixed header">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/font_awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/font_awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/font_awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/font_awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/font_awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/Icon_basket.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/Icon_laptop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/Icon_locked.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/heart_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/icon_graph.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/icon_music.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/icon_star.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/ipad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/lines_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/phone_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/relax_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/relax_bg_small.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/img/top_slide_bg.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font_awesome/fonts/FontAwesome.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.woff2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/furniture.zip" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/.idea/Practice7.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/css/animate.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/css/main.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/css/media.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/font_awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/font_awesome/fonts/fontawesome-webfont.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/js/script.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Practice7/js/wow.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/media.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font_awesome/css/font-awesome.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font_awesome/fonts/fontawesome-webfont.svg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -257,7 +301,7 @@
       <workItem from="1484684342849" duration="525000" />
       <workItem from="1484684932773" duration="15830000" />
       <workItem from="1484762775275" duration="1707000" />
-      <workItem from="1484772953213" duration="12688000" />
+      <workItem from="1484772953213" duration="12749000" />
     </task>
     <task id="LOCAL-00001" summary="start to dev">
       <created>1484684473077</created>
@@ -287,19 +331,26 @@
       <option name="project" value="LOCAL" />
       <updated>1484824924402</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added 'gallery', fixed header">
+      <created>1484826540351</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1484826540351</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37462000" />
+    <option name="totallyTimeSpent" value="37523000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
