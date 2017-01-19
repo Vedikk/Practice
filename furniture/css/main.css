@@ -1,11 +1,12 @@
-@import "http://webfonts.ru/import/oswald.css";
 
 * {
     margin: 0;
     padding: 0;
     font-family: Oswald, sans-serif;
 }
-
+body{
+    overflow-x: hidden;
+}
 a {
     text-decoration: none;
 }
@@ -13,21 +14,60 @@ a {
 a:hover {
     text-decoration: none;
 }
-p{
+a:visited,
+a:focus{
+    text-decoration: none;
+    color: #e1ccb9;
+}
+
+p {
     text-indent: 25px;
 }
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+
+h2:before {
+    margin-right: 20px;
+    display: inline-block;
+    content: "";
+    width: 10%;
+    border-bottom: solid #000000 1px;
+    vertical-align: middle;
+}
+
+h2:after {
+    margin-left: 20px;
+    display: inline-block;
+    content: "";
+    width: 10%;
+    border-bottom: solid #000000 1px;
+    vertical-align: middle;
+}
+
 /****************/
 /*HEADER*/
 .header {
-    height: 40px;
-    padding: 2% 0;
-    box-sizing: content-box;
+    min-height: 60px;
+    /*box-sizing: content-box;*/
+    background-color: rgba(255, 255, 255, .8);
+    position: fixed;
+    top: 0;
+    width:100%;
+    padding-right: 10%;
+    z-index: 2;
 }
 
 .logo {
-    line-height: 40px;
+    margin-left: 6%;
+    line-height: 60px;
     font-size: 2em;
     font-weight: bold;
+    display: inline-block;
 }
 
 .logo > a {
@@ -40,7 +80,7 @@ p{
 
 .nav > a {
     margin-left: 15px;
-    line-height: 40px;
+    line-height: 60px;
     color: #000;
     font-size: 1.2em;
 }
@@ -50,6 +90,18 @@ p{
 .inner-box-logo:hover {
     color: #e1ccb9;
 }
+#menuBars{
+    display: none;
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.fa-bars{
+    color: #000;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
 /*TOP SLIDER*/
 .top-slider {
     background: url("../img/main_bg_big.jpg") center;
@@ -83,39 +135,16 @@ p{
     color: #fff;
     font-size: 3em;
 }
+
 /*ABOUT*/
 .about {
     padding: 30px;
-    height:auto;
+    height: auto;
     min-height: 870px;
     background-color: #F2EFED;
 }
 
-.about > h2 {
-    margin-top: 20px;
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-.about > h2:before {
-    margin-right: 20px;
-    display: inline-block;
-    content: "";
-    width: 10%;
-    border-bottom: solid #000000 1px;
-    vertical-align: middle;
-}
-
-.about > h2:after {
-    margin-left: 20px;
-    display: inline-block;
-    content: "";
-    width: 10%;
-    border-bottom: solid #000000 1px;
-    vertical-align: middle;
-}
-
-.about>p{
+.about > p {
     margin: 0 auto;
     text-align: justify;
     max-width: 800px;
@@ -124,15 +153,55 @@ p{
 
 /*FEATURES*/
 
-.feature{
+.feature {
     text-align: center;
+    padding: 0;
 }
-.feature-fa{
+
+.feature-fa {
     font-size: 3em;
     margin: 30px 0;
 }
-.feature>p{
+
+.feature > p {
     font-size: 1.4em;
 }
 
+/*Gallery*/
+.gallery-cont {
+    background-color: #E7E2DB;
+}
+.img-block{
+    margin-bottom: 20px;
+}
+.small-img {
+    cursor: pointer;
+}
+
+.popup {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    text-align: center;
+}
+
+.popup_bg {
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.popup_img {
+    position: relative;
+    margin: 5% auto 0;
+    z-index: 2;
+    max-height: 90%;
+    max-width: 90%;
+
+}
 
