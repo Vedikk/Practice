@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="eabd291e-e78b-4c5d-9847-b4732ce6f205" name="TERRA" url="http://ftp.meblivn.adr.com.ua/">
+        <fileTransfer host="ftp.meblivn.adr.com.ua" port="21" rootFolder="/meblivn.adr.com.ua">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

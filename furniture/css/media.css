@@ -13,13 +13,9 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
 
-    .popup_img {
-        margin-top: 35%;
-    }
-
     .small-img {
         width: 100%;
-        /*max-height: 160px;*/
+
     }
 
     #menuBars {
@@ -44,13 +40,17 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
-    p {
-        text-align: justify;
+    .about>p,
+    .feature>p{
+        hyphens: auto;
+        font-kerning: normal;
+        text-align: center;
+        font-size: 1.2em;
     }
-    h2:before,
-    h2:after{
-        width:0;
+    .feature{
+        padding: 0;
     }
+
 
 }
 
@@ -59,6 +59,7 @@
     .inner-box {
         width: 90%;
     }
+
 }
 
 /* Custom, iPhone Retina */
@@ -75,6 +76,23 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) {
+    h2:before {
+        margin-right: 20px;
+        display: inline-block;
+        content: "";
+        width: 10%;
+        border-bottom: solid #000000 1px;
+        vertical-align: middle;
+    }
+
+    h2:after {
+        margin-left: 20px;
+        display: inline-block;
+        content: "";
+        width: 10%;
+        border-bottom: solid #000000 1px;
+        vertical-align: middle;
+    }
 
 }
 
