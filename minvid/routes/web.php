@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'IndexController@index');
 
 Auth::routes();
 
@@ -21,4 +19,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('add-video', 'VideoController@add')->name('addVideo');
 Route::post('add-video', 'VideoController@store')->name('videoStore');
+
+Route::get('video', 'VideoController@show')->name('showVideo');
+
+Route::get('upload', 'VideoController@upload');
 

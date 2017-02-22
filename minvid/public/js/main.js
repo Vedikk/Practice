@@ -4,18 +4,24 @@
 
 //on page add video, pull video name
 
-var fileName=document.getElementById('file-name');
 
-var global_file= document.getElementById ('upload_video_path');
+if (window.location.pathname == '/add-video') {
 
-global_file.addEventListener('change', getFileName);
+    var fileName = document.getElementById('file-name');
+    var global_file = document.getElementById('upload_video_path');
+    //event
+    global_file.addEventListener('change', getFileName);
 
-function getFileName () {
+    function getFileName() {
 
-    var file = document.getElementById ('upload_video_path').value;
+        var file = document.getElementById('upload_video_path').value;
 
-    file = file.replace (/\\/g, "/").split ('/').pop ();
-
-    fileName.innerHTML = 'The name of file: ' + file;
+        //file name creating
+        file = file.replace(/\\/g, "/").split('/').pop();
+        fileName.innerHTML = 'File name: ' + file;
+    }
 
 }
+
+
+

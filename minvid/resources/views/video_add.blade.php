@@ -30,13 +30,11 @@
 
                                 <div id="video_add_div" class="col-md-6">
                                     <label>
-                                        <input type="file"  name="path[]" id="upload_video_path">
+                                        <input type="file"  name="path" id="upload_video_path">
                                         <span>Choose file</span>
                                     </label>
-
                                 </div>
                                 <div id="file-name"></div>
-
                             </div>
 
 

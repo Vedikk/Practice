@@ -3,7 +3,7 @@
     padding: 0;
     outline: none !important;
 }
-
+/*add-video pg*/
 #video_add_div input[type="file"] {
 
     display: none; /* hide input file */
@@ -59,13 +59,29 @@
 /*Name of file div on add-video page */
 
 #file-name{
-    margin-top:5px
+    margin:5px 0 0 20px;
 }
 
-/*block with errors*/
+
+/*block with errors, all pgs*/
 
 .alert-danger{
     padding: 15px 30px;
     margin: 0 auto 20px;
     width: 80%;
+}
+
+a.dropdown-toggle{
+    width:160px;
+}
+
+
+/*Home pg*/
+.last_updates_ul{
+    margin-left: 15px;
+    list-style: none;
+}
+.last_updates_li{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }

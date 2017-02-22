@@ -16,11 +16,16 @@
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
+
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,600" rel="stylesheet" type="text/css">
+
 </head>
 <body>
 <div id="app">
