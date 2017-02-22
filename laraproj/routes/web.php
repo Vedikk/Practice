@@ -15,3 +15,10 @@ Route::get('/', function () {
     return view('layouts.site');
 });
 Route::get('page', 'IndexController@index');
+Route::get('user/{id}', 'IndexController@show')->name('userShow');
+Route::get('add-video', 'VideoController@add');
+Route::post('add-video', 'VideoController@store')->name('videoStore');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
