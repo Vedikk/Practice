@@ -2,10 +2,23 @@
     margin: 0;
     padding: 0;
     outline: none !important;
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+/*404*/
+.message404{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+.pic404 {
+    display: block;
+    margin: 0 auto;
+    width: 100vw;
+    height: 80vh;
+}
+
 /*All pgs*/
-.user_corner_avatar{
+.user_corner_avatar {
     height: 32px;
     width: 32px;
     position: absolute;
@@ -16,9 +29,10 @@
     border-radius: 50%;
 
 }
-a.dropdown-toggle{
 
-    min-width:160px;
+a.dropdown-toggle {
+
+    min-width: 160px;
 }
 
 /*add-video pg*/
@@ -69,54 +83,53 @@ a.dropdown-toggle{
 #video_add_div span {
 
     line-height: 34px;
-    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     /*font-weight: bold;*/
 
 }
 
 /*Name of file div on add-video page */
 
-#file-name{
-    margin:5px 0 0 20px;
+#file-name {
+    margin: 5px 0 0 20px;
 }
-
 
 /*block with errors, all pgs*/
 
-.alert-danger{
+.alert-danger {
     padding: 15px 30px;
     margin: 0 auto 20px;
     width: 80%;
 }
 
-
-
-
 /*Home pg*/
-.last_updates_ul{
+.last_updates_ul {
     margin-left: 15px;
     list-style: none;
 }
-.last_updates_li{
+
+.last_updates_li {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
 }
-.user_avatar{
+
+.user_avatar {
     height: 150px;
     width: 150px;
     float: left;
-    -webkit-border-radius:50%;
-    -moz-border-radius:50%;
-    border-radius:50%;
-    margin-right:25px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 25px;
 }
-.user_avatar+h3{
+
+.user_avatar + h3 {
     vertical-align: top;
     display: inline-block;
 }
 
 /*Video player page*/
-.video_player_container{
+.video_player_container {
     margin: 30px auto;
     max-height: 420px;
     max-width: 750px;
@@ -125,7 +138,7 @@ a.dropdown-toggle{
 
 }
 
-.video_player{
+.video_player {
     max-width: 750px;
     max-height: 420px;
 }
