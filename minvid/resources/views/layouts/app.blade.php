@@ -14,6 +14,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+
 
     <!-- Scripts -->
 
@@ -32,7 +34,7 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-
+                    
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#app-navbar-collapse">
@@ -62,23 +64,27 @@
                         <li><a href="{{ route('register') }}">Register</a></li>
                     @else
                         <li class="dropdown">
+
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-expanded="false">
+                               aria-expanded="false" style="position: relative; padding-left: 50px;">
+                                <img src="/avatars/{{ Auth::user()->avatar }}" alt="user_avatar" class="user_corner_avatar">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
-                                    <a href="{{ route('home') }}">Home</a>
+                                    <a href="{{ route('home') }}">
+                                        <i class="fa fa-user" aria-hidden="true"></i> Home
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('addVideo') }}">Add video</a>
+                                    <a href="{{ route('addVideo') }}"> <i class="fa fa-plus-circle"></i> Add video</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Logout
+                                        <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
