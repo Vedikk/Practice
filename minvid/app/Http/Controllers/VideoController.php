@@ -24,18 +24,19 @@ class VideoController extends Controller
         ]);
 
         $file_path = $request->file('path');
-        $file_path->move(public_path('videos'), $file_path->getClientOriginalName());
+        $extension = $file_path->getClientOriginalExtension();
+        $file_name = md5(time() * time());
+        $file_path->move(public_path('videos'), $file_name . '.' . $extension);
         $ulr = $file_path->getClientOriginalName();
 
         $data = $request->all();
         $video = new Video;
         $video->fill($data);
         $video->user_id = \Auth::user()->id;
-        $video->path = ('/videos/') . $ulr;
+        $video->path = ('/videos/') . $file_name . '.' . $extension;
         $video->save();
 
         /*************************/
-
 
 
         /******************************/
@@ -46,17 +47,15 @@ class VideoController extends Controller
 
     }
 
+    public function show()
+    {
+
+        $video = \DB::table('videos')->orderBy('created_at', 'desc')->take(10)->get();
+
+        return view('video')->with('video', $video);
 
 
-public function show()
-{
-
-    $video = \DB::table('videos')->orderBy('created_at', 'desc')->take(10)->get();
-
-    return view('video')->with('video', $video);
-
-
-}
+    }
 
 
 }

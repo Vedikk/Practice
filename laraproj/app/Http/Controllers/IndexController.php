@@ -12,21 +12,16 @@ class IndexController extends Controller
 
     public function index()
     {
-        //'login', 'full_name', 'registration_date', 'user_id', 'password'
 
-        $users = DB::table('users')->get();
-
-
-        //$users = DB::table('users')->first();
-
+        $users = \DB::table('users')->get();
 
         return view('welcome')->with('users', $users);
     }
 
     public function show($id){
-        $user = DB::table('users')->select('id', 'full_name', 'registration_date')->where('id', $id)->first();
+        $user =\DB::table('users')->select('id', 'name', 'created_at')->where('id', $id)->first();
 
-        dump($user);
+        return view('user')->with('user', $user);
 
     }
 }

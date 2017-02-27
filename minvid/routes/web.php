@@ -20,7 +20,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('add-video', 'VideoController@add')->name('addVideo');
 Route::post('add-video', 'VideoController@store')->name('videoStore');
 
-Route::get('video', 'VideoController@show')->name('showVideo');
+Route::get('video', 'VideoController@show');
 
 Route::get('upload', 'VideoController@upload');
+
+Route::get('videos/{id}', 'VideoPageController@show')->name('videoPage');
+
+Route::post('home', 'HomeController@uploadAvatar');
 
