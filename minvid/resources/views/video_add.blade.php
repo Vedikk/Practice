@@ -29,12 +29,11 @@
 
 
                                 <div id="video_add_div" class="col-md-6">
-                                    <label>
-                                        <input type="file"  name="path" id="upload_video_path">
-                                        <span>Choose file</span>
+                                    <label for="inputFile" class="btn btn-default btn-file" id="inputFileLabel">
+                                        Browse
                                     </label>
+                                    <input type="file"  name="path" id="inputFile">
                                 </div>
-                                <div id="file-name"></div>
                             </div>
 
 

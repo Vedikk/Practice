@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/png">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -14,8 +15,6 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
-
 
     <!-- Scripts -->
 
@@ -26,7 +25,7 @@
     </script>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,600" rel="stylesheet" type="text/css">
+    {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,600" rel="stylesheet" type="text/css">--}}
 
 </head>
 <body>
@@ -51,10 +50,6 @@
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav">
-                    &nbsp;
-                </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -74,17 +69,17 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="{{ route('home') }}">
-                                        <i class="fa fa-user" aria-hidden="true"></i> Home
+                                         Home
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ route('addVideo') }}"> <i class="fa fa-plus-circle"></i> Add video</a>
+                                    <a href="{{ route('addVideo') }}"> Add video</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        <i class="fa fa-sign-out" aria-hidden="true"></i> Logout
+                                        </i> Logout
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"

@@ -4,6 +4,11 @@
     outline: none !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+a,
+a:hover{
+    color: #337ab7;
+    text-decoration: none;
+}
 
 /*404*/
 .message404{
@@ -42,57 +47,7 @@ a.dropdown-toggle {
 
 }
 
-/* make styles for upload button*/
 
-#video_add_div {
-
-    margin-left: 15px;
-    position: relative;
-    overflow: hidden;
-    width: 200px;
-    height: 34px;
-    background: #337ab7;
-    border-radius: 5px;
-    color: #fff;
-    text-align: center;
-
-}
-
-#video_add_div:hover {
-
-    background: #286090;
-
-}
-
-/* Stretch label the entire block region .file-upload */
-
-#video_add_div label {
-
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-
-}
-
-/* text in block*/
-
-#video_add_div span {
-
-    line-height: 34px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    /*font-weight: bold;*/
-
-}
-
-/*Name of file div on add-video page */
-
-#file-name {
-    margin: 5px 0 0 20px;
-}
 
 /*block with errors, all pgs*/
 
@@ -103,14 +58,12 @@ a.dropdown-toggle {
 }
 
 /*Home pg*/
-.last_updates_ul {
-    margin-left: 15px;
-    list-style: none;
-}
+.last_updates_home_cont{
+    text-align: center;
 
-.last_updates_li {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
+}
+.last_video_home{
+
 }
 
 .user_avatar {
@@ -120,12 +73,18 @@ a.dropdown-toggle {
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    margin-right: 25px;
+    margin: 0 20px;
+
 }
 
 .user_avatar + h3 {
     vertical-align: top;
     display: inline-block;
+}
+
+.home_thumbnail{
+    height: 180px;
+    width: 240px;
 }
 
 /*Video player page*/
