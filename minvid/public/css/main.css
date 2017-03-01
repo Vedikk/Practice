@@ -19,7 +19,12 @@ a:hover{
     display: block;
     margin: 0 auto;
     width: 100vw;
-    height: 80vh;
+    height: 75vh;
+}
+.sub_message404{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.9em;
 }
 
 /*All pgs*/
@@ -32,12 +37,19 @@ a:hover{
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-
 }
 
 a.dropdown-toggle {
 
     min-width: 160px;
+}
+
+.video_thumbnail:hover{
+    opacity: 0.8;
+}
+.video_link{
+    width: 100%;
+    text-align: center;
 }
 
 /*add-video pg*/
@@ -58,13 +70,18 @@ a.dropdown-toggle {
 }
 
 /*Home pg*/
-.last_updates_home_cont{
+
+.updates_title_home{
     text-align: center;
-
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
 }
-.last_video_home{
-
+.panel-heading{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.3em;
 }
+
 
 .user_avatar {
     height: 150px;
@@ -82,9 +99,11 @@ a.dropdown-toggle {
     display: inline-block;
 }
 
-.home_thumbnail{
+.video_thumbnail{
     height: 180px;
-    width: 240px;
+    width: 280px;
+    margin: 0 auto;
+    display: block;
 }
 
 /*Video player page*/
@@ -94,11 +113,16 @@ a.dropdown-toggle {
     max-width: 750px;
     font-family: 'Raleway', sans-serif;
     color: #337ab7;
-
 }
 
-.video_player {
-    max-width: 750px;
-    max-height: 420px;
+/*Welcome page*/
+.welcome_tittle{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #777;
 }
-
+.video_descript_welcome{
+    font-family: 'Raleway', sans-serif;
+    color: #777;
+    text-align: center;
+}

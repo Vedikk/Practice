@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Providers\AuthServiceProvider;
 use App\Video;
 use FFMpeg\Coordinate\TimeCode;
+use FFMpeg\FFProbe;
 use Illuminate\Http\Request;
 use FFMpeg\FFMpeg;
 use Intervention\Image\Facades\Image;
@@ -14,7 +15,13 @@ class VideoController extends Controller
 {
     public function add()
     {
-        return view('video_add');
+        if (\Auth::guest()){
+            return view('auth.login');
+        }
+        else {
+            return view('video_add');
+        }
+
     }
 
     public function store(Request $request)
@@ -31,10 +38,12 @@ class VideoController extends Controller
 
         $ffmpeg = FFMpeg::create();
         $vidFrame = $ffmpeg->open($file_path);
-        $frame = $vidFrame->frame(TimeCode::fromSeconds(15));
+        $ffprobe = FFProbe::create();
+        $duration = $ffprobe->format($file_path)->get('duration');
+        $frame = $vidFrame->frame(TimeCode::fromSeconds(round($duration/2)));
         $frame_name = 'thumbnails/'.  md5(time()*time()) . '.jpg';
         $frame->save( $frame_name);
-        Image::make($frame_name)->resize(320,240)->save($frame_name);
+        Image::make($frame_name)->resize(320,200)->save($frame_name);
 
 
         $extension = $file_path->getClientOriginalExtension();

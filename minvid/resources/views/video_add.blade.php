@@ -32,7 +32,7 @@
                                     <label for="inputFile" class="btn btn-default btn-file" id="inputFileLabel">
                                         Browse
                                     </label>
-                                    <input type="file"  name="path" id="inputFile">
+                                    <input type="file"  name="path" id="inputFile" accept="video/mp4">
                                 </div>
                             </div>
 
@@ -42,7 +42,6 @@
                                     <button type="submit" class="btn btn-primary">
                                         Upload
                                     </button>
-
                                 </div>
                             </div>
                         </form>

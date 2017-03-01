@@ -13,19 +13,23 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    {{--<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
-    <!-- Scripts -->
 
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    {{--js video player below--}}
+    <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
     <script>
-        window.Laravel = {!! json_encode([
+        window.Laravel ={!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
 
+
     <!-- Fonts -->
-    {{--<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,600" rel="stylesheet" type="text/css">--}}
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400,600" rel="stylesheet" type="text/css">
 
 </head>
 <body>
