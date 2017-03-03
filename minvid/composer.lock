@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e22fc2e248473e1de4f1007d80e08cb",
+    "content-hash": "e06176baecd926bc172610e79a23d749",
     "packages": [
         {
             "name": "alchemy/binary-driver",
@@ -2596,6 +2596,50 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2016-09-20T12:50:39+00:00"
+        },
+        {
+            "name": "trexology/reviewrateable",
+            "version": "1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Trexology/laravel-reviewRateable.git",
+                "reference": "127736f5919cfb93e13b38902704839262da435d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Trexology/laravel-reviewRateable/zipball/127736f5919cfb93e13b38902704839262da435d",
+                "reference": "127736f5919cfb93e13b38902704839262da435d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Trexology\\ReviewRateable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Trex Lim",
+                    "email": "trexlim@gmail.com"
+                }
+            ],
+            "description": "Rating syetem for Laravel 5",
+            "keywords": [
+                "Ratable",
+                "Rating",
+                "ReviewRateable",
+                "laravel",
+                "reviewable"
+            ],
+            "time": "2015-12-05T09:01:56+00:00"
         },
         {
             "name": "vlucas/phpdotenv",

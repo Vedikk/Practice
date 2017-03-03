@@ -36,7 +36,7 @@
                     <div class="last_video_home owl-item">
                         <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block">
                             <img src="{{ $video->screenshot_path }}" alt="last_update_video"
-                                 class="video_thumbnail img-thumbnail img-responsive"> {{ $video->video_name }}
+                                 class="video_thumbnail img-thumbnail img-responsive"> <span class="video_name">{{ $video->video_name }}</span>
                         </a>
                     </div>
 

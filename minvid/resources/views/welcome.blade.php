@@ -8,13 +8,13 @@
         <div class="container">
             @foreach($videos as $video)
 
-                <div class="col-md-3">
-                    <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block">
-                        {{ $video->video_name }}
+                <div class="col-md-3 ">
+                    <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block" title="{{ $video->video_name }}">
+                        <span class="video_name">{{ $video->video_name }}</span>
                         <img src="{{ $video->screenshot_path }}" alt="last_update_video"
                              class="video_thumbnail img-thumbnail img-responsive">
                     </a>
-                    <div class="video_descript_welcome">
+                    <div class="video_descript_welcome" >
                         <p>
                             Added by: {{ $video->name }} <br>
                             {{ $video->created_at }}
@@ -26,3 +26,4 @@
     </div>
 
 @endsection
+

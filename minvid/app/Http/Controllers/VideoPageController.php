@@ -32,13 +32,16 @@ class VideoPageController extends Controller
             'comment' => 'required|max:255'
         ]);
 
+        //$data =$request->all();
         $comment = $request->comment;
+        $rating  = $request->rating;
 
 
-        \DB::table('ratings')->insert(
-            ['comment'=> $comment, 'video_id'=>$id, 'user_id'=> \Auth::user()->id, 'created_at'=> Carbon::now()]
+       \DB::table('ratings')->insert(
+            ['comment'=> $comment, 'rating'=>$rating, 'video_id'=>$id, 'user_id'=> \Auth::user()->id, 'created_at'=> Carbon::now()]
         );
-        /*$rating = new Rating;
+       /* $rating = new Rating();
+        $rating->video_id = $id;
         $rating->fill($data);
 
         $rating->video_id = $id;
