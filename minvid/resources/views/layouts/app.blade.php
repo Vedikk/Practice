@@ -12,13 +12,18 @@
     <title>{{ config('app.name', 'MinVid') }}</title>
 
     <!-- Styles -->
+    <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     {{--<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">--}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 
     <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+
     {{--js video player below--}}
     <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
     <script>
@@ -37,7 +42,7 @@
     <nav class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
-                    
+
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#app-navbar-collapse">
@@ -49,7 +54,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img class="navbar_logo" src="{{ asset('img/logo.png') }}" alt="logo" >
                 </a>
             </div>
 
@@ -66,14 +71,15 @@
 
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false" style="position: relative; padding-left: 50px;">
-                                <img src="/avatars/{{ Auth::user()->avatar }}" alt="user_avatar" class="user_corner_avatar">
+                                <img src="/avatars/{{ Auth::user()->avatar }}" alt="user_avatar"
+                                     class="user_corner_avatar">
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
                                 <li>
                                     <a href="{{ route('home') }}">
-                                         Home
+                                        Home
                                     </a>
                                 </li>
                                 <li>
@@ -83,7 +89,7 @@
                                     <a href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        </i> Logout
+                                        Logout
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -105,7 +111,8 @@
 </div>
 
 <!-- Scripts -->
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/jRate.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
+
 </body>
 </html>

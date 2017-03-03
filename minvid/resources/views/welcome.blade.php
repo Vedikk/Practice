@@ -16,7 +16,7 @@
                     </a>
                     <div class="video_descript_welcome">
                         <p>
-                            Added by: {{ $video->name }}
+                            Added by: {{ $video->name }} <br>
                             {{ $video->created_at }}
                         </p>
                     </div>
@@ -24,5 +24,5 @@
             @endforeach
         </div>
     </div>
-    {{--    {{ --}}
+
 @endsection

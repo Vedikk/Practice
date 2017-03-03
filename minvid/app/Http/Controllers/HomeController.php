@@ -29,7 +29,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        //$videos = Video::orderBy('created_at', 'desc')->where('user_id', Auth::user())->take(10)->get();
         $videos =Video::where('user_id', Auth::user()->id)
             ->orderBy('created_at', 'desc')
             ->get();
@@ -44,7 +43,9 @@ class HomeController extends Controller
         if ($request->hasFile('avatar')){
             $avatar = $request->file('avatar');
             $fileName = md5(time()) . '.' . $avatar->getClientOriginalExtension();
-            Image::make($avatar->getRealPath())->resize(300,300)->save(public_path('/avatars/') . $fileName);
+            Image::make($avatar->getRealPath())
+                ->resize(300,300)
+                ->save(public_path('/avatars/') . $fileName);
             $user  = Auth::user();
             $user->avatar=$fileName;
             $user->save();
