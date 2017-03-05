@@ -55,8 +55,8 @@ $(document).ready(function () {
     }
     $("#jRate").jRate({
         backgroundColor: '#eded71' ,
-        startColor: "#ededed",
-        endColor: "#1c5ace",
+        startColor: '#ff68be',
+        endColor: "blue",
         width: 30,
         height: 30,
         precition: '0.1',

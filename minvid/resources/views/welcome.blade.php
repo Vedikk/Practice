@@ -16,7 +16,7 @@
                     </a>
                     <div class="video_descript_welcome" >
                         <p>
-                            Added by: {{ $video->name }} <br>
+                            Added by: <a href="{{ route('UserPage', ['id'=> $video->user_id]) }}">{{ $video->name }}</a> <br>
                             {{ $video->created_at }}
                         </p>
                     </div>

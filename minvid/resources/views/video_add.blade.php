@@ -32,7 +32,7 @@
                                     <label for="inputFile" class="btn btn-default btn-file" id="inputFileLabel">
                                         Browse
                                     </label>
-                                    <input type="file"  name="path" id="inputFile" accept="video/mp4">
+                                    <input type="file"  name="path" id="inputFile" accept="video/*">
                                 </div>
                             </div>
 

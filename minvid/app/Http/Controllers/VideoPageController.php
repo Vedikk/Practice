@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Rating;
+use App\User;
+use App\Video;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -11,7 +13,7 @@ class VideoPageController extends Controller
     public function show($id)
     {
 
-        $video = \DB::table('videos')->where('id', $id)->first();
+        $video = Video::where('id', $id)->first();
 
         $rating = \DB::table('ratings')
             ->leftJoin('users', 'ratings.user_id', '=', 'users.id')
@@ -21,7 +23,7 @@ class VideoPageController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-//            \DB::table('ratings')->where('video_id', $id)->get();
+
         return view('video', array('video' => $video,
             'rating' => $rating));
     }
@@ -40,6 +42,7 @@ class VideoPageController extends Controller
        \DB::table('ratings')->insert(
             ['comment'=> $comment, 'rating'=>$rating, 'video_id'=>$id, 'user_id'=> \Auth::user()->id, 'created_at'=> Carbon::now()]
         );
+
        /* $rating = new Rating();
         $rating->video_id = $id;
         $rating->fill($data);

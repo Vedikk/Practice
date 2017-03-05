@@ -29,3 +29,5 @@ Route::post('videos/{id}', 'VideoPageController@storeComment')->name('storeComme
 
 Route::post('home', 'HomeController@uploadAvatar');
 
+Route::get('user/{id}', 'UserController@show')->name('UserPage');
+

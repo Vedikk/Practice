@@ -69,12 +69,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "25c8de637ddf79567d721c1856616be01db7b960"
+                "reference": "b611cb5eff09d656f392bba9ec1f66cde5a013fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/25c8de637ddf79567d721c1856616be01db7b960",
-                "reference": "25c8de637ddf79567d721c1856616be01db7b960",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/b611cb5eff09d656f392bba9ec1f66cde5a013fd",
+                "reference": "b611cb5eff09d656f392bba9ec1f66cde5a013fd",
                 "shasum": ""
             },
             "require": {
@@ -127,7 +127,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2017-02-20 12:54:53"
+            "time": "2017-03-05 19:04:42"
         },
         {
             "name": "barryvdh/reflection-docblock",

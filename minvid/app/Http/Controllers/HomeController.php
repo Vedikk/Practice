@@ -30,8 +30,8 @@ class HomeController extends Controller
     public function index()
     {
         $videos =Video::where('user_id', Auth::user()->id)
-            ->orderBy('created_at', 'desc')
-            ->get();
+        ->orderBy('created_at', 'desc')
+        ->get();
 
 
         return view('home', array('videos' => $videos, 'user' => Auth::user()));

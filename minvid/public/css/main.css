@@ -120,6 +120,10 @@ a.dropdown-toggle {
     font-family: 'Raleway', sans-serif;
     color: #337ab7;
 }
+.video_author{
+    margin-top: 15px;
+    border-bottom:1px solid #dedede; ;
+}
 .small_user_avatar{
     height:50px;
     -webkit-border-radius: 50%;
@@ -136,6 +140,21 @@ a.dropdown-toggle {
     margin:  5px auto;
     resize: none;
 }
+.comment_body{
+    margin-left: 55px;
+}
+.comment_cont{
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 15px;
+}
+.comment_author{
+    vertical-align: middle;
+    font-weight: 600;
+}
+.comment_cont span{
+    font-family: 'Raleway', sans-serif;
+}
+
 /*Welcome page*/
 .video_descript_welcome,
 .welcome_tittle{
