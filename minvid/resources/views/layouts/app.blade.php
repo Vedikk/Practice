@@ -12,17 +12,30 @@
     <title>{{ config('app.name', 'MinVid') }}</title>
 
     <!-- Styles -->
+    {{--Owl carousel vv  --}}
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/theme.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    {{-- auto generated css , include bootstrap--}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{--<link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">--}}
+    {{-- rating stars vv --}}
+    <link href="{{ asset('css/star-rating.min.css') }}" media="all" rel="stylesheet" type="text/css">
+    {{-- main css file--}}
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
 
     <!-- Scripts -->
+    {{-- auto generated js, include vue js vv --}}
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    {{--Owl carousel vv  --}}
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+    {{-- rating stars--}}
+    <script src="{{ asset('js/star-rating.min.js') }}"></script>
+    <script src="{{ asset('js/theme.min.js') }}"></script>
+
     {{--js video player below--}}
     <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
     <script>
@@ -110,7 +123,6 @@
 </div>
 
 <!-- Scripts -->
-<script src="{{ asset('js/jRate.min.js') }}"></script>
 <script src="{{ asset('js/main.js') }}"></script>
 
 </body>

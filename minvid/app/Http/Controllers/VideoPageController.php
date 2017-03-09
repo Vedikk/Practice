@@ -13,6 +13,7 @@ class VideoPageController extends Controller
     public function show($id)
     {
 
+
         $video = Video::where('id', $id)->first();
 
         $rating = \DB::table('ratings')

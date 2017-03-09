@@ -154,6 +154,13 @@ a.dropdown-toggle {
 .comment_cont span{
     font-family: 'Raleway', sans-serif;
 }
+.comment_cont .comment_date{
+    float: right;
+    font-family: "Helvetica Neue", "Arial", sans-serif;
+    font-size: 0.7em;
+    font-weight: 200;
+    vertical-align: bottom;
+}
 
 /*Welcome page*/
 .video_descript_welcome,

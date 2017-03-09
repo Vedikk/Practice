@@ -5,8 +5,8 @@
 
 /*style of browse button on home and add video pages*/
 if (window.location.pathname == '/home' || window.location.pathname == '/add-video') {
-    var inputFile = document.getElementById('inputFile');
-    var inputFileLabel = document.getElementById('inputFileLabel');
+    let inputFile = document.getElementById('inputFile');
+    let inputFileLabel = document.getElementById('inputFileLabel');
     inputFile.addEventListener('change', changeColor);
     function changeColor() {
         if (inputFile.value) {
@@ -27,6 +27,7 @@ if (window.location.pathname == '/home' || window.location.pathname == '/add-vid
 
 
 $(document).ready(function () {
+
     /*owl carousel options*/
     $(".home-carousel").owlCarousel({
         loop:true,
@@ -47,23 +48,41 @@ $(document).ready(function () {
         }
     });
 
+
+    /* ... if name of video > 38 */
     let $videoArray = $('.video_name');
     for ( let videoName of $videoArray){
-        if(videoName.innerText.length >= 38  ){
-           videoName.innerText  = (videoName.innerText.slice(0, 34)+'...');
+        if(videoName.innerText.length >= 28  ){
+           videoName.innerText  = (videoName.innerText.slice(0, 27)+'...');
         }
     }
-    $("#jRate").jRate({
-        backgroundColor: '#eded71' ,
-        startColor: '#ff68be',
-        endColor: "blue",
-        width: 30,
-        height: 30,
-        precition: '0.1',
-        onSet: function(rating) {
-            $('#ratingInput').val(rating);
-        }
+
+
+    /* rating stars*/
+    $('#input-1-ltr-alt-xs').rating({
+        showCaption: false,
+        hoverOnClear: false,
+        step: 0.5,
+        theme: 'krajee-fa',
+        defaultCaption: '{rating} hearts',
+        starCaptions: function (rating) {
+            return rating == 1 ? 'One heart' : rating + ' hearts';
+        },
+        filledStar: '<i class="fa fa-heart"></i>',
+        emptyStar: '<i class="fa fa-heart-o"></i>'
+    });
+    $('#input-1-ltr-alt-xs').on('rating.change', function (event, value, caption) {
+        let $input = $("input[name='rating']");
+        $input.val(value);
+        console.log($input.val())
     });
 
+    /*test ajax*/
+    $('#moreBtn').click(function () {
+        $.ajax({
+            method: 'POST',
+            url: '/more',
 
+        });
+    });
 });

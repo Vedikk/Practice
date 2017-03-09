@@ -8,7 +8,7 @@
         <div class="container">
             @foreach($videos as $video)
 
-                <div class="col-md-3 ">
+                <div class="col-md-3 col-sm-6 ">
                     <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block" title="{{ $video->video_name }}">
                         <span class="video_name">{{ $video->video_name }}</span>
                         <img src="{{ $video->screenshot_path }}" alt="last_update_video"
@@ -23,6 +23,7 @@
                 </div>
             @endforeach
         </div>
+        <button class="btn btn-warning btn-block" id="moreBtn">More</button>
     </div>
 
 @endsection

@@ -11,7 +11,17 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
+Route::get('/', 'IndexController@index')->name('index');
+
+
+Route::post('/more', function (Request $request) {
+    var_dump($request);
+    if (Request::ajax()) {
+        $count = 12;
+
+        return redirect()->action('IndexController@index', ['count' => $count]);
+    };
+});
 
 Auth::routes();
 

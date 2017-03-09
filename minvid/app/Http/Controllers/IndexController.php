@@ -13,11 +13,13 @@ class IndexController extends Controller
 
         $orderBy = 'created_at';
 
+        $count  = 8;
+
         $videos = \DB::table('videos')
             ->leftJoin('users', 'videos.user_id', '=', 'users.id')
             ->select('users.id', 'users.name', 'videos.*')
             ->orderBy('created_at', 'desc')
-            ->take(8)
+            ->take($count)
             ->get();
 
 

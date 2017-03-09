@@ -10,7 +10,7 @@
                 </h3>
                 <div class="embed-responsive embed-responsive-16by9 ">
                     <video class="embed-responsive-item video_player afterglow " poster='/{{ $video->screenshot_path }}'
-                           autoplay width="750" height="420">
+                            width="750" height="420">
                         <source src="{{ $video->path}}" type="video/mp4">
                     </video>
                 </div>
@@ -29,9 +29,8 @@
                         <div class="panel-heading ">
                             <img src="/avatars/{{ $r->avatar }}" alt="user_avatar" class="small_user_avatar">
                             <span class="comment_author">{{ $r->name }}</span> <br>
-                            <span class="comment_body">
-                            {{ $r->comment }}
-                        </span>
+                            <span class="comment_body">{{ $r->comment }}</span>
+                            <span class="comment_date">{{ $r->created_at }}</span>
                         </div>
 
                     </div>
@@ -44,8 +43,7 @@
                     <form id="comment_form" name="comment_form" role="form" method="POST"
                           action="{{ route('storeComment', $video->id) }}">
                         {{ csrf_field() }}
-                        <div id="jRate"></div>
-                        <input type="text" name="rating" id="ratingInput" style="display: none">
+                        <input id="input-1-ltr-alt-xs" name="rating" class="kv-ltr-theme-fa-alt rating-loading" value="1" dir="ltr" data-size="xs">
                         <textarea name="comment" class="textarea_comment" form="comment_form" cols="30" rows="10"
                                   placeholder="Leave Your comment"></textarea>
                         <button type="submit" class="btn btn-primary">Leave comment</button>
