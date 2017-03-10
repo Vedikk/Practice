@@ -15,14 +15,16 @@ class IndexController extends Controller
 
         $count  = 8;
 
-        $videos = \DB::table('videos')
-            ->leftJoin('users', 'videos.user_id', '=', 'users.id')
+        $videos = Video::leftJoin('users', 'videos.user_id', '=', 'users.id')
             ->select('users.id', 'users.name', 'videos.*')
             ->orderBy('created_at', 'desc')
+
             ->take($count)
             ->get();
 
 
-        return view('welcome', array('videos'=> $videos));
+        return view('welcome', array(
+            'videos'=> $videos,
+        ));
     }
 }

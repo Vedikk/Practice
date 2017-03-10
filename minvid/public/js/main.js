@@ -59,7 +59,8 @@ $(document).ready(function () {
 
 
     /* rating stars*/
-    $('#input-1-ltr-alt-xs').rating({
+    let $bottomRating = $('#input-1-ltr-alt-xs');
+    $bottomRating.rating({
         showCaption: false,
         hoverOnClear: false,
         step: 0.5,
@@ -71,10 +72,40 @@ $(document).ready(function () {
         filledStar: '<i class="fa fa-heart"></i>',
         emptyStar: '<i class="fa fa-heart-o"></i>'
     });
-    $('#input-1-ltr-alt-xs').on('rating.change', function (event, value, caption) {
+    $bottomRating.on('rating.change', function (event, value, caption) {
         let $input = $("input[name='rating']");
         $input.val(value);
-        console.log($input.val())
+    });
+
+    /*video avg rating*/
+    $('#videoRate').rating({
+        showClear: false,
+        theme: 'krajee-fa',
+        disabled:false,
+        readonly: true,
+        defaultCaption: '{rating} hearts',
+        starCaptions: function (rating) {
+            return rating == 1 ? 'One heart' : rating + ' hearts';
+        },
+        step: 0.1,
+        filledStar: '<i class="fa fa-heart"></i>',
+        emptyStar: '<i class="fa fa-heart-o"></i>'
+    });
+    /*welcome video rating*/
+    $('.welcome_video_rating').rating({
+        showClear: false,
+        showCaption: false,
+        theme: 'krajee-fa',
+        disabled:false,
+        readonly: true,
+        size: 'xxs',
+        defaultCaption: '{rating} hearts',
+        starCaptions: function (rating) {
+            return rating == 1 ? 'One heart' : rating + ' hearts';
+        },
+        step: 0.1,
+        filledStar: '<i class="fa fa-heart"></i>',
+        emptyStar: '<i class="fa fa-heart-o"></i>'
     });
 
     /*test ajax*/

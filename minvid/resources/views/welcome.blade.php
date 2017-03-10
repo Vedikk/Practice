@@ -16,8 +16,10 @@
                     </a>
                     <div class="video_descript_welcome" >
                         <p>
-                            Added by: <a href="{{ route('UserPage', ['id'=> $video->user_id]) }}">{{ $video->name }}</a> <br>
-                            {{ $video->created_at }}
+                            Added by: <a href="{{ route('UserPage', ['id'=> $video->user_id]) }}">{{ $video->name }}</a>
+                            <br>
+                            <input  class="kv-ltr-theme-fa-alt rating-loading welcome_video_rating" value="{{ $video->rating() }}">
+                            {{--<span>{{ $video->created_at}}</span>--}}
                         </p>
                     </div>
                 </div>

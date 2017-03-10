@@ -24,35 +24,45 @@ class VideoPageController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
+        $videoRating = \DB::table('ratings')
+            ->where('video_id', $id)
+            ->avg('rating');
 
-        return view('video', array('video' => $video,
-            'rating' => $rating));
+
+        return view('video', array(
+            'video' => $video,
+            'rating' => $rating,
+            'videoRating'=>$videoRating,
+            ));
     }
 
     public function storeComment(Request $request, $id){
-        $this->validate($request, [
+
+        // in case of cooment/rating requiered
+
+        /*$this->validate($request, [
 
             'comment' => 'required|max:255'
-        ]);
+        ]);*/
 
-        //$data =$request->all();
+        /*
+       $data =$request->all();
+       $rating = new Rating();
+       $rating->video_id = $id;
+       $rating->fill($data);
+
+       $rating->video_id = $id;
+       $rating->user_id = \Auth::user()->id;
+
+       $rating->save();
+        */
+
         $comment = $request->comment;
         $rating  = $request->rating;
-
 
        \DB::table('ratings')->insert(
             ['comment'=> $comment, 'rating'=>$rating, 'video_id'=>$id, 'user_id'=> \Auth::user()->id, 'created_at'=> Carbon::now()]
         );
-
-       /* $rating = new Rating();
-        $rating->video_id = $id;
-        $rating->fill($data);
-
-        $rating->video_id = $id;
-        $rating->user_id = \Auth::user()->id;
-
-        $rating->save();*/
-
 
         return redirect('videos/'.$id);
     }

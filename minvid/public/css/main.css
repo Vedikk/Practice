@@ -164,11 +164,14 @@ a.dropdown-toggle {
 
 /*Welcome page*/
 .video_descript_welcome,
-.welcome_tittle{
+.welcome_tittle {
     font-family: 'Raleway', sans-serif;
-    font-weight:300;
+    font-weight: 300;
     color: #777;
     text-align: center;
 }
+.ff{
+    color: #ec3e2b;
+}   
 
 
