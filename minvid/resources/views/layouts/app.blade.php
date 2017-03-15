@@ -28,8 +28,9 @@
 
     <!-- Scripts -->
     {{-- auto generated js, include vue js vv --}}
-    <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+
     {{--Owl carousel vv  --}}
     <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
     {{-- rating stars--}}
@@ -96,6 +97,9 @@
                                 </li>
                                 <li>
                                     <a href="{{ route('addVideo') }}"> Add video</a>
+                                </li>
+                                <li>
+                                    <a href="{{route('allUsers')}}">All Users</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"

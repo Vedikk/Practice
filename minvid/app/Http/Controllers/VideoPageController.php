@@ -60,6 +60,8 @@ class VideoPageController extends Controller
         $comment = $request->comment;
         $rating  = $request->rating;
 
+
+
        \DB::table('ratings')->insert(
             ['comment'=> $comment, 'rating'=>$rating, 'video_id'=>$id, 'user_id'=> \Auth::user()->id, 'created_at'=> Carbon::now()]
         );

@@ -23,26 +23,24 @@ if (window.location.pathname == '/home' || window.location.pathname == '/add-vid
 }
 
 
-
-
-
 $(document).ready(function () {
 
     /*owl carousel options*/
     $(".home-carousel").owlCarousel({
-        loop:true,
-        margin:10,
-        responsiveClass:true,
-        nav:true,
-        dots:true,
-        responsive:{
-            0:{
-                items:1
+        loop: true,
+        margin: 10,
+        responsiveClass: true,
+        nav: true,
+        dots: true,
+        responsive: {
+            0: {
+                touchDrag: true,
+                items: 1
             },
-            600:{
-                items:3,
-                center:true,
-                autoplay:true,
+            600: {
+                items: 3,
+                center: true,
+                autoplay: true,
                 autoplayHoverPause: true
             }
         }
@@ -51,14 +49,14 @@ $(document).ready(function () {
 
     /* ... if name of video > 38 */
     let $videoArray = $('.video_name');
-    for ( let videoName of $videoArray){
-        if(videoName.innerText.length >= 28  ){
-           videoName.innerText  = (videoName.innerText.slice(0, 27)+'...');
+    for (let videoName of $videoArray) {
+        if (videoName.innerText.length >= 28) {
+            videoName.innerText = (videoName.innerText.slice(0, 27) + '...');
         }
     }
 
 
-    /* rating stars*/
+    /* rating stars on comment*/
     let $bottomRating = $('#input-1-ltr-alt-xs');
     $bottomRating.rating({
         showCaption: false,
@@ -81,7 +79,7 @@ $(document).ready(function () {
     $('#videoRate').rating({
         showClear: false,
         theme: 'krajee-fa',
-        disabled:false,
+        disabled: false,
         readonly: true,
         defaultCaption: '{rating} hearts',
         starCaptions: function (rating) {
@@ -96,7 +94,7 @@ $(document).ready(function () {
         showClear: false,
         showCaption: false,
         theme: 'krajee-fa',
-        disabled:false,
+        disabled: false,
         readonly: true,
         size: 'xxs',
         defaultCaption: '{rating} hearts',
@@ -109,11 +107,22 @@ $(document).ready(function () {
     });
 
     /*test ajax*/
+
     $('#moreBtn').click(function () {
+
         $.ajax({
             method: 'POST',
-            url: '/more',
-
+            url: url,
+            data: {_token: token},
+            async: true,
+            success: function (msg) {
+                console.log(this.data, this.url);
+            },
+            error: function (data) {
+                console.log(data);
+                alert("fail" + ' ' + this.data)
+            },
         });
     });
+
 });

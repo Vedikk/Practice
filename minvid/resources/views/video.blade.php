@@ -48,11 +48,12 @@
                 <div class="col-md-8 col-md-offset-2">
                     <form id="comment_form" name="comment_form" role="form" method="POST"
                           action="{{ route('storeComment', $video->id) }}">
-                        {{ csrf_field() }}
+
                         <input id="input-1-ltr-alt-xs" name="rating" class="kv-ltr-theme-fa-alt rating-loading"
                                value="1" dir="ltr" data-size="xs">
                         <textarea name="comment" class="textarea_comment" form="comment_form" cols="30" rows="10"
                                   placeholder="Leave Your comment"></textarea>
+                        {{ csrf_field() }}
                         <button type="submit" class="btn btn-primary">Leave comment</button>
 
                     </form>
@@ -61,8 +62,5 @@
             </div>
         </div>
 
-        <p>
-
-        </p>
 
 @endsection
