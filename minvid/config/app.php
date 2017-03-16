@@ -180,6 +180,7 @@ return [
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Lakshmajim\Thumbnail\ThumbnailServiceProvider::class,
         Trexology\ReviewRateable\ReviewRateableServiceProvider::class,
+        Kryptonit3\Counter\CounterServiceProvider::class,
 
 
 
@@ -233,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Thumbnail' => Lakshmajim\Thumbnail\Facade\Thumbnail::class,
         'Image' => Intervention\Image\Facades\Image::class,
+        'Counter' => Kryptonit3\Counter\Facades\CounterFacade::class,
 
 
 

@@ -18,6 +18,7 @@ class IndexController extends Controller
             ->orderBy('created_at', 'desc')
             ->paginate(8);
 
+
         return view('welcome', array(
             'videos' => $videos,
 

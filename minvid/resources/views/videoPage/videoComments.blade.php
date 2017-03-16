@@ -9,7 +9,7 @@
                     <img src="/avatars/{{ $r->user()->avatar }}" alt="user_avatar" class="small_user_avatar">
                     <span class="comment_author">{{ $r->user()->name }}</span> <br>
                 </a>
-                <span class="comment_body">{{ $r->comment }}</span>
+                <p class="comment_body">{{ $r->comment }}</p>
                 <span class="comment_date">{{ $r->created_at }}</span>
             </div>
 

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc8eaecce0609e855db4bc0c841721a9",
+    "content-hash": "3318288e5227092b56508db6729cfa3f",
     "packages": [
         {
             "name": "alchemy/binary-driver",
@@ -651,6 +651,54 @@
             "time": "2015-04-20T18:58:01+00:00"
         },
         {
+            "name": "jaybizzle/crawler-detect",
+            "version": "v1.2.36",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JayBizzle/Crawler-Detect.git",
+                "reference": "186cdc021f972a7e06963a84ef692d75f5b325c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JayBizzle/Crawler-Detect/zipball/186cdc021f972a7e06963a84ef692d75f5b325c6",
+                "reference": "186cdc021f972a7e06963a84ef692d75f5b325c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jaybizzle\\CrawlerDetect\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Beech",
+                    "email": "m@rkbee.ch",
+                    "role": "Developer"
+                }
+            ],
+            "description": "CrawlerDetect is a PHP class for detecting bots/crawlers/spiders via the user agent",
+            "homepage": "https://github.com/JayBizzle/Crawler-Detect/",
+            "keywords": [
+                "crawler",
+                "crawler detect",
+                "crawler detector",
+                "crawlerdetect",
+                "php crawler detect"
+            ],
+            "time": "2017-03-03T21:13:00+00:00"
+        },
+        {
             "name": "kartik-v/bootstrap-star-rating",
             "version": "dev-master",
             "source": {
@@ -693,6 +741,45 @@
                 "svg"
             ],
             "time": "2017-02-21 19:18:33"
+        },
+        {
+            "name": "kryptonit3/counter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Kryptonit3/Counter.git",
+                "reference": "4ddafc961f7a680c389b940205d5cf5cb70368b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kryptonit3/Counter/zipball/4ddafc961f7a680c389b940205d5cf5cb70368b6",
+                "reference": "4ddafc961f7a680c389b940205d5cf5cb70368b6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "jaybizzle/crawler-detect": "1.*",
+                "php": ">=5.3.3",
+                "ramsey/uuid": "~3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kryptonit3\\Counter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jesse Szypulski",
+                    "email": "jesse.szypulski@gmail.com"
+                }
+            ],
+            "description": "Hit counter for your pages.",
+            "time": "2016-09-26 17:31:00"
         },
         {
             "name": "lakshmajim/thumbnail",
@@ -4208,7 +4295,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "barryvdh/laravel-ide-helper": 20,
-        "kartik-v/bootstrap-star-rating": 20
+        "kartik-v/bootstrap-star-rating": 20,
+        "kryptonit3/counter": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
