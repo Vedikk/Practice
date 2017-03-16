@@ -12,22 +12,11 @@ class IndexController extends Controller
     public function index(Request $request)
     {
 
-        $count = 8;
-
-        if ($request->ajax()) {
-            $count += 4;
-            var_dump($count);
-
-        }
 
         $videos = Video::leftJoin('users', 'videos.user_id', '=', 'users.id')
             ->select('users.id', 'users.name', 'videos.*')
             ->orderBy('created_at', 'desc')
-            ->take($count)
-            ->get();
-
-
-
+            ->paginate(8);
 
         return view('welcome', array(
             'videos' => $videos,

@@ -36,6 +36,8 @@
     {{-- rating stars--}}
     <script src="{{ asset('js/star-rating.min.js') }}"></script>
     <script src="{{ asset('js/theme.min.js') }}"></script>
+    {{--infinite scroll--}}
+    <script src="{{ asset('js/jquery.jscroll.min.js') }}"></script>
 
     {{--js video player below--}}
     <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>

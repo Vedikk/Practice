@@ -30,5 +30,5 @@ Route::get('user/{id}', 'UserController@show')->name('UserPage');
 
 Route::get('users', 'AllUsersController@show')->name('allUsers');
 
-Route::post('/more', 'IndexController@index')->name('more');
+Route::post('/', 'IndexController@index')->name('more');
 

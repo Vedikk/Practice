@@ -75,6 +75,7 @@ $(document).ready(function () {
         $input.val(value);
     });
 
+
     /*video avg rating*/
     $('#videoRate').rating({
         showClear: false,
@@ -106,23 +107,6 @@ $(document).ready(function () {
         emptyStar: '<i class="fa fa-heart-o"></i>'
     });
 
-    /*test ajax*/
 
-    $('#moreBtn').click(function () {
-
-        $.ajax({
-            method: 'POST',
-            url: url,
-            data: {_token: token},
-            async: true,
-            success: function (msg) {
-                console.log(this.data, this.url);
-            },
-            error: function (data) {
-                console.log(data);
-                alert("fail" + ' ' + this.data)
-            },
-        });
-    });
 
 });

@@ -3,8 +3,8 @@
 @section('content')
 
     <div class="wrapper">
-        <h1 class="welcome_tittle"> Check out last updates!</h1>
-        <div class="container">
+        <h1 class="welcome_tittle infinite-scroll"> Check out last updates!</h1>
+        <div class="container ">
             @foreach($videos as $video)
 
                 <div class="col-md-3 col-sm-6 ">
@@ -26,12 +26,9 @@
                 </div>
             @endforeach
         </div>
-        <button class="btn btn-warning btn-block" id="moreBtn">More</button>
+        <div class="pagination_welcome">
+            {{ $videos->links() }}
+        </div>
     </div>
-
-    <script>
-        var token = '{{ Session::token() }}';
-        var url = '{{route('more')}}';
-    </script>
-@endsection
+    @endsection
 

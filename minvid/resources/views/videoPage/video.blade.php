@@ -48,6 +48,8 @@
                 </div>
             </div>
         </div>
+
+        {{--ajax query for pagination--}}
         <script type="text/javascript">
 
             $(function () {

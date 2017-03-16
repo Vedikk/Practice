@@ -170,9 +170,12 @@ a.dropdown-toggle {
     color: #777;
     text-align: center;
 }
-
 .video_descript_welcome .desc_span_welcome{
     font-size: 0.74em;
+}
+.pagination_welcome{
+    width: 200px;
+    margin: 0 auto;
 }
 
 /*All users page*/
