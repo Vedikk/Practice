@@ -10,33 +10,42 @@ use Illuminate\Http\Request;
 
 class VideoPageController extends Controller
 {
-    public function show($id)
+    protected $rating;
+
+    public function __construct(Rating $rating)
     {
+        $this->rating = $rating;
+    }
 
-
+    public function index(Request $request, $id)
+    {
+        $rating = $this->rating->where('video_id', $id)->latest('created_at')->paginate(5);
         $video = Video::where('id', $id)->first();
-
-        $rating = \DB::table('ratings')
-            ->leftJoin('users', 'ratings.user_id', '=', 'users.id')
-            ->leftJoin('videos', 'ratings.video_id', '=', 'videos.id')
-            ->select('ratings.*', 'users.name', 'users.avatar', 'videos.video_name')
-            ->where('ratings.video_id', $id)
-            ->orderBy('created_at', 'desc')
-            ->get();
-
-        $videoRating = \DB::table('ratings')
-            ->where('video_id', $id)
+        $videoRating = Rating::where('video_id', $id)
             ->avg('rating');
 
 
-        return view('video', array(
-            'video' => $video,
-            'rating' => $rating,
-            'videoRating'=>$videoRating,
-            ));
+        if ($request->ajax()) {
+            return view('videoPage.videoComments',
+                array(
+                    'rating' => $rating,
+                    'video'=>$video,
+                    'videoRating'=>$videoRating
+                ))->render();
+        }
+
+
+        return view('videoPage.video', array(
+            'rating'=> $rating,
+            'video'=>$video,
+            'videoRating'=>$videoRating
+        ));
     }
 
-    public function storeComment(Request $request, $id){
+
+
+    public function storeComment(Request $request, $id)
+    {
 
         // in case of cooment/rating requiered
 
@@ -58,14 +67,13 @@ class VideoPageController extends Controller
         */
 
         $comment = $request->comment;
-        $rating  = $request->rating;
+        $rating = $request->rating;
 
 
-
-       \DB::table('ratings')->insert(
-            ['comment'=> $comment, 'rating'=>$rating, 'video_id'=>$id, 'user_id'=> \Auth::user()->id, 'created_at'=> Carbon::now()]
+        \DB::table('ratings')->insert(
+            ['comment' => $comment, 'rating' => $rating, 'video_id' => $id, 'user_id' => \Auth::user()->id, 'created_at' => Carbon::now()]
         );
 
-        return redirect('videos/'.$id);
+        return redirect()->back();
     }
 }

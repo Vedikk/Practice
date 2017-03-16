@@ -145,7 +145,6 @@ a.dropdown-toggle {
 }
 .comment_cont{
     border-bottom: 1px solid #dedede;
-    margin-bottom: 15px;
 }
 .comment_author{
     vertical-align: middle;
@@ -155,8 +154,7 @@ a.dropdown-toggle {
     font-family: 'Raleway', sans-serif;
 }
 .comment_cont .comment_date{
-    /*float: right;*/
-    margin-top:15px;
+    margin-top:5px;
     display: block;
     font-family: "Helvetica Neue", "Arial", sans-serif;
     font-size: 0.7em;

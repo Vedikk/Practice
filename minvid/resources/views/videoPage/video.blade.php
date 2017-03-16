@@ -25,25 +25,12 @@
             </div>
 
             <div class="container comments">
-                @foreach($rating as $r)
-                    @if(empty($r->comment))
-                        @continue
-                    @endif
-                    <div class="col-md-8 col-md-offset-2 comment_cont ">
-                        <div class="panel-heading ">
-                            <a href="{{ route('UserPage', ['id'=> $r->user_id]) }}">
-                                <img src="/avatars/{{ $r->avatar }}" alt="user_avatar" class="small_user_avatar">
-                                <span class="comment_author">{{ $r->name }}</span> <br>
-                            </a>
-                            <span class="comment_body">{{ $r->comment }}</span>
-                            <span class="comment_date">{{ $r->created_at }}</span>
-                        </div>
+                @if (count($rating) > 0)
 
-                    </div>
+                    @include('videoPage.videoComments')
 
-                @endforeach
+                @endif
             </div>
-
             <div class="container">
                 <div class="col-md-8 col-md-offset-2">
                     <form id="comment_form" name="comment_form" role="form" method="POST"
@@ -61,6 +48,28 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
 
+            $(function () {
+                $('body').on('click', '.pagination a', function (e) {
+                    e.preventDefault();
 
+                    $('#load a').css('color', '#dfecf6');
+                    $('#load').append('<img style="position: absolute; left: 0; top: 0; z-index: 100000;" src="/images/loading.gif" />');
+                    var url = $(this).attr('href');
+                    getComments(url);
+                    window.history.pushState("", "", url);
+                });
+
+                function getComments(url) {
+                    $.ajax({
+                        url: url
+                    }).done(function (data) {
+                        $('.comments').html(data);
+                    }).fail(function () {
+                        alert('Comments could not be loaded.');
+                    });
+                }
+            });
+        </script>
 @endsection

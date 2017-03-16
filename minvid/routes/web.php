@@ -21,7 +21,7 @@ Route::get('add-video', 'VideoController@add')->name('addVideo');
 Route::post('add-video', 'VideoController@store')->name('videoStore');
 
 
-Route::get('videos/{id}', 'VideoPageController@show')->name('videoPage');
+Route::get('videos{id}', 'VideoPageController@index')->name('videoPage');
 Route::post('videos/{id}', 'VideoPageController@storeComment')->name('storeComment');
 
 Route::post('home', 'HomeController@uploadAvatar');

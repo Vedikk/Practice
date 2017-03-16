@@ -17,11 +17,6 @@ class IndexController extends Controller
         if ($request->ajax()) {
             $count += 4;
             var_dump($count);
-            $videos = Video::leftJoin('users', 'videos.user_id', '=', 'users.id')
-                ->select('users.id', 'users.name', 'videos.*')
-                ->orderBy('created_at', 'desc')
-                ->take($count)
-                ->get();
 
         }
 
