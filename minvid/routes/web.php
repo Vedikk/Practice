@@ -21,7 +21,7 @@ Route::get('add-video', 'VideoController@add')->name('addVideo');
 Route::post('add-video', 'VideoController@store')->name('videoStore');
 
 
-Route::get('videos{id}', 'VideoPageController@index')->name('videoPage');
+Route::get('videos/{id}', 'VideoPageController@index')->name('videoPage');
 Route::post('videos/{id}', 'VideoPageController@storeComment')->name('storeComment');
 
 Route::post('home', 'HomeController@uploadAvatar');
@@ -31,4 +31,6 @@ Route::get('user/{id}', 'UserController@show')->name('UserPage');
 Route::get('users', 'AllUsersController@show')->name('allUsers');
 
 Route::post('/', 'IndexController@index')->name('more');
+
+Route::post('sortByRating');
 

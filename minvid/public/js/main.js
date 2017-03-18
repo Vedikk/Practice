@@ -11,15 +11,13 @@ if (window.location.pathname == '/home' || window.location.pathname == '/add-vid
     function changeColor() {
         if (inputFile.value) {
             inputFileLabel.style.background = 'rgb(84, 170, 84)';
-            inputFileLabel.innerHTML = inputFile.value;
+            inputFileLabel.innerHTML = inputFile.value.replace( "C:\\fakepath\\", '' );
             inputFileLabel.style.color = 'white';
         }
         else {
             inputFileLabel.innerHTML = 'Please select file!';
         }
-
     }
-
 }
 
 
@@ -45,16 +43,6 @@ $(document).ready(function () {
             }
         }
     });
-
-
-    /* ... if name of video > 38 */
-    let $videoArray = $('.video_name');
-    for (let videoName of $videoArray) {
-        if (videoName.innerText.length >= 28) {
-            videoName.innerText = (videoName.innerText.slice(0, 27) + '...');
-        }
-    }
-
 
     /* rating stars on comment*/
     let $bottomRating = $('#input-1-ltr-alt-xs');
@@ -90,6 +78,7 @@ $(document).ready(function () {
         filledStar: '<i class="fa fa-heart"></i>',
         emptyStar: '<i class="fa fa-heart-o"></i>'
     });
+
     /*welcome video rating*/
     $('.welcome_video_rating').rating({
         showClear: false,
@@ -107,6 +96,42 @@ $(document).ready(function () {
         emptyStar: '<i class="fa fa-heart-o"></i>'
     });
 
+    /*All users page*/
 
-
+    /*infinite page*/
+    if(window.location.pathname.indexOf('videos')<0){
+        $('ul.pagination').hide();
+        $(function() {
+            $('.infinite-scroll').jscroll({
+                autoTrigger: true,
+                loadingHtml: '<img class="center-block" src="/img/loading.gif" alt="Loading..." />',
+                padding: 0,
+                nextSelector: '.pagination li.active + li a',
+                contentSelector: 'div.infinite-scroll',
+                callback: function() {
+                    $('ul.pagination').remove();
+                }
+            });
+        });
+        /*ratings*/
+        $('.infinite-scroll').bind('DOMSubtreeModified', function () {
+            setTimeout(function () {
+                $('.welcome_video_rating').rating({
+                    showClear: false,
+                    showCaption: false,
+                    theme: 'krajee-fa',
+                    disabled: false,
+                    readonly: true,
+                    size: 'xxs',
+                    defaultCaption: '{rating} hearts',
+                    starCaptions: function (rating) {
+                        return rating == 1 ? 'One heart' : rating + ' hearts';
+                    },
+                    step: 0.1,
+                    filledStar: '<i class="fa fa-heart"></i>',
+                    emptyStar: '<i class="fa fa-heart-o"></i>'
+                });
+            },1);
+        });
+    }
 });

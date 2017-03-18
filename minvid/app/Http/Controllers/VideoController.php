@@ -71,7 +71,7 @@ class VideoController extends Controller
         $video->user_id = \Auth::user()->id;
         $video->path = ('/videos/') . $file_name . '.' . $extension;
         $video->screenshot_path = $frame_name;
-
+        $video->short_name = substr($data['video_name'], 0, 27) . '...';
 
         $video->save();
 

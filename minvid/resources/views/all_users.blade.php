@@ -1,21 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+    <div class="container">
+        @foreach($users as $user)
+            <div class="col-md-3 col-sm-4 user_block_all_users ">
+                <a href="{{ route('UserPage', ['id'=>$user->id]) }}" style="background: url('/avatars/{{ $user->avatar }}');  background-size: contain;" class="user_link_all_users">
+                    <h3 class="user_name_all_users">  {{ $user->name }}</h3>
+                </a>
 
-    @foreach($users as $user)
-        <div class="col-md-3 col-sm-4 user_block_all_users ">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <a href="{{ route('UserPage', ['id'=>$user->id]) }}" class="user_link_all_users">
-                        <img src="/avatars/{{ $user->avatar }}" alt="user_avatar" class=" all_users_img">
-                        <br>
-                        <h3>  {{ $user->name }}</h3>
-                    </a>
-                </div>
             </div>
-        </div>
-        </div>
-
-    @endforeach
-
+        @endforeach
+    </div>
 @endsection

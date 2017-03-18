@@ -188,29 +188,41 @@ a.dropdown-toggle {
 .video_descript_welcome .desc_span_welcome{
     font-size: 0.74em;
 }
-.pagination_welcome{
-    width: 200px;
-    margin: 0 auto;
+.infinite-scroll{
+    padding-left:0;
 }
 
 /*All users page*/
 .user_block_all_users{
-    height: 250px;
+    height: 210px;
+    transition: all 0.5s ease;
 }
-.all_users_img{
-    display: block;
-    height: 150px;
-    width: 150px;
+.user_link_all_users{
+    height: 200px;
+    width: 200px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    margin: 0 auto;
-}
-.user_link_all_users h3{
-    text-align: center;
-    margin:0;
     display: block;
 }
+.user_name_all_users{
+    padding-top: 90px;
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+    background-color: rgba(204, 204, 204, .8);
+}
+
+.user_block_all_users:hover .user_name_all_users{
+    display: block;
+}
+
 
 
 

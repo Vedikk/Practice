@@ -101,7 +101,7 @@
                                     <a href="{{ route('addVideo') }}"> Add video</a>
                                 </li>
                                 <li>
-                                    <a href="{{route('allUsers')}}">All Users</a>
+                                    <a href="{{route('allUsers')}}">All users</a>
                                 </li>
                                 <li>
                                     <a href="{{ route('logout') }}"
@@ -115,7 +115,6 @@
                                         {{ csrf_field() }}
                                     </form>
                                 </li>
-
                             </ul>
                         </li>
                     @endif

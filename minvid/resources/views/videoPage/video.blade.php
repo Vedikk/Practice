@@ -19,7 +19,7 @@
                         <img src=" /avatars/{{ $video->user()->avatar }}" alt="user_avatar" class="small_user_avatar">
                         <a href="{{ route('UserPage', ['id'=> $video->user_id]) }}">{{ $video->user()->name }}</a> <br>
                     </p>
-                    <input id="videoRate" class="kv-ltr-theme-fa-alt rating-loading" value="{{ $videoRating }}"
+                    <input id="videoRate" class="kv-ltr-theme-fa-alt rating-loading" value="{{ $video->ratingAvg() }}"
                            dir="ltr" data-size="xs">
                 </div>
             </div>

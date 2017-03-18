@@ -10,9 +10,13 @@ class Video extends Model
 {
 
 
-    protected $fillable = array('video_name', 'user_id', 'path', 'screenshot_path');
+    protected $fillable = array('video_name', 'user_id', 'path', 'screenshot_path', 'short_name');
 
     public function rating(){
+        return Rating::where('video_id', $this->id)->first();
+    }
+
+    public function ratingAvg(){
         return Rating::where('video_id', $this->id)->avg('rating');
     }
 
