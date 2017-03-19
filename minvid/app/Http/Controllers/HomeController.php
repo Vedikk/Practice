@@ -54,4 +54,13 @@ class HomeController extends Controller
         return redirect('home');
 
     }
+
+    public function deleteVideo(Request $request){
+
+//        if ($request->ajax()){
+            var_dump($request);
+            redirect()->route('index');
+//        }
+
+    }
 }

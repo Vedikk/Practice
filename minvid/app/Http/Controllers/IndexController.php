@@ -11,18 +11,27 @@ class IndexController extends Controller
 {
     public function index()
     {
-
-        $videos = Video::leftJoin('users', 'videos.user_id', '=', 'users.id')
-            ->select('users.id', 'users.name', 'videos.*')
-            ->orderBy('created_at', 'desc')
+        $videos = Video::orderBy('created_at', 'desc')
             ->paginate(8);
-
-        //$comments_count = Video::rating->comment->count()->get();
-
 
         return view('welcome', array(
             'videos' => $videos,
-            //'comments_count'=>$comments_count
+        ));
+
+    }
+
+    public function byRating(){
+
+        $videos = Video::leftJoin('ratings', 'videos.id', '=', 'video_id')
+            ->select(array('videos.*',
+                \DB::raw('AVG(ratings.rating) as ratings_average')
+            ))
+            ->groupBy('videos.id')
+            ->orderBy('ratings_average', 'desc')
+            ->paginate(8);
+
+        return view('welcome', array(
+            'videos' => $videos,
         ));
 
     }

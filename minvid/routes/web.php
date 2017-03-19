@@ -30,7 +30,7 @@ Route::get('user/{id}', 'UserController@show')->name('UserPage');
 
 Route::get('users', 'AllUsersController@show')->name('allUsers');
 
-Route::post('/', 'IndexController@index')->name('more');
+Route::get('r', 'IndexController@byRating')->name('sortByRating');
 
-Route::post('sortByRating');
+Route::get('delete', 'HomeController@deleteVideo')->name('deleteVideo');
 

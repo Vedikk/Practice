@@ -21,16 +21,12 @@ class VideoPageController extends Controller
     {
         $rating = $this->rating->where('video_id', $id)->latest('created_at')->paginate(5);
         $video = Video::where('id', $id)->first();
-        $videoRating = Rating::where('video_id', $id)
-            ->avg('rating');
-
 
         if ($request->ajax()) {
             return view('videoPage.videoComments',
                 array(
                     'rating' => $rating,
                     'video'=>$video,
-                    'videoRating'=>$videoRating
                 ))->render();
         }
 
@@ -38,7 +34,6 @@ class VideoPageController extends Controller
         return view('videoPage.video', array(
             'rating'=> $rating,
             'video'=>$video,
-            'videoRating'=>$videoRating
         ));
     }
 
@@ -46,25 +41,6 @@ class VideoPageController extends Controller
 
     public function storeComment(Request $request, $id)
     {
-
-        // in case of cooment/rating requiered
-
-        /*$this->validate($request, [
-
-            'comment' => 'required|max:255'
-        ]);*/
-
-        /*
-       $data =$request->all();
-       $rating = new Rating();
-       $rating->video_id = $id;
-       $rating->fill($data);
-
-       $rating->video_id = $id;
-       $rating->user_id = \Auth::user()->id;
-
-       $rating->save();
-        */
 
         $comment = $request->comment;
         $rating = $request->rating;
@@ -76,4 +52,5 @@ class VideoPageController extends Controller
 
         return redirect()->back();
     }
+
 }

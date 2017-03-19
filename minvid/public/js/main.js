@@ -11,7 +11,7 @@ if (window.location.pathname == '/home' || window.location.pathname == '/add-vid
     function changeColor() {
         if (inputFile.value) {
             inputFileLabel.style.background = 'rgb(84, 170, 84)';
-            inputFileLabel.innerHTML = inputFile.value.replace( "C:\\fakepath\\", '' );
+            inputFileLabel.innerHTML = inputFile.value.replace("C:\\fakepath\\", '');
             inputFileLabel.style.color = 'white';
         }
         else {
@@ -99,21 +99,21 @@ $(document).ready(function () {
     /*All users page*/
 
     /*infinite page*/
-    if(window.location.pathname.indexOf('videos')<0){
+    if (window.location.pathname.indexOf('videos') < 0) {
         $('ul.pagination').hide();
-        $(function() {
+        $(function () {
             $('.infinite-scroll').jscroll({
                 autoTrigger: true,
                 loadingHtml: '<img class="center-block" src="/img/loading.gif" alt="Loading..." />',
                 padding: 0,
                 nextSelector: '.pagination li.active + li a',
                 contentSelector: 'div.infinite-scroll',
-                callback: function() {
+                callback: function () {
                     $('ul.pagination').remove();
                 }
             });
         });
-        /*ratings*/
+        /*ratings when adding videos on page*/
         $('.infinite-scroll').bind('DOMSubtreeModified', function () {
             setTimeout(function () {
                 $('.welcome_video_rating').rating({
@@ -131,7 +131,42 @@ $(document).ready(function () {
                     filledStar: '<i class="fa fa-heart"></i>',
                     emptyStar: '<i class="fa fa-heart-o"></i>'
                 });
-            },1);
+            }, 1);
         });
     }
+    /*comments ajax*/
+    $('body').on('click', '.pagination a', function (e) {
+        e.preventDefault();
+        $('#load a').css('color', '#dfecf6');
+        $('#load').append('<img style="position: absolute; left: 0; top: 0; z-index: 100000;" src="/images/loading.gif" />');
+        let url = $(this).attr('href');
+        getComments(url);
+        window.history.pushState("", "", url);
+    });
+    function getComments(url) {
+        $.ajax({
+            url: url
+        }).done(function (data) {
+            $('.comments').html(data);
+        }).fail(function () {
+            alert('Comments could not be loaded.');
+        });
+    }
+
+    /*delete video ajax*/
+    $('.delete_button').on('click', function (e) {
+        e.preventDefault();
+        let data = $('.delete_button').attr('href');
+        deleteVideo();
+
+        function deleteVideo() {
+            $.ajax({
+                url: 'delete',
+                data: data,
+            }).done(function () {
+                console.log('success', data);
+            })
+        }
+    })
+
 });

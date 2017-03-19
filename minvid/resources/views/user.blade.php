@@ -8,7 +8,7 @@
                 <div class="col-md-10 col-md-offset-1">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <img src="/avatars/{{ $user->avatar }}" alt="user_avatar" class="user_avatar">
+                            <img src="/avatars/{{ $user->avatar }}"  alt="user_avatar" class="user_avatar">
                             <h3>  {{ $user->name }}</h3><br>
                         </div>
                     </div>

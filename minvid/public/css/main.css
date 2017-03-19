@@ -63,7 +63,7 @@ a.dropdown-toggle {
 
 .video_thumbnail:hover{
     transform: scale(1.02);
-    opacity: 0.8;
+    opacity: 0.9;
 }
 .video_link{
     width: 100%;
@@ -178,8 +178,15 @@ a.dropdown-toggle {
 }
 
 /*Welcome page*/
+.sortBy_welcome{
+    display: block;
+    text-align: right;
+
+}
 .video_descript_welcome,
 .welcome_tittle {
+    display: block;
+    margin-top: 5px;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     color: #777;

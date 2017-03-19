@@ -2,9 +2,13 @@
 
 @section('content')
 
-    <div class="wrapper">
+    <div class="container">
+        <div class="sortBy_welcome " >
+            <span>Sort by:</span>
+            <a href="{{route('index')}}">Date</a> | <a href="{{route('sortByRating')}}">Rating</a>
+        </div>
         <h1 class="welcome_tittle"> Check out last updates!</h1>
-        <div class="container infinite-scroll ">
+        <div class=" infinite-scroll ">
             @foreach($videos as $video)
                 <div class="col-lg-3 col-md-4 col-sm-6 ">
                     <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block"
@@ -18,7 +22,7 @@
                             <input class="kv-ltr-theme-fa-alt rating-loading welcome_video_rating"
                                    value="{{ $video->ratingAvg() }}">
                             <span class="desc_span_welcome"> Added by: <a
-                                        href="{{ route('UserPage', ['id'=> $video->user_id]) }}">{{ $video->name }}}}</a> {{ $video->created_at}}</span>
+                                        href="{{ route('UserPage', ['id'=> $video->user_id]) }}">{{ $video->user()->name }}</a> {{ $video->created_at}}</span>
                             <br>
 
                         </p>
