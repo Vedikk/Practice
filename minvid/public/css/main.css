@@ -122,6 +122,22 @@ a.dropdown-toggle {
     margin: 0 auto;
     display: block;
 }
+.delete_button{
+    position: absolute;
+    right:6px;
+    top: 5px;
+    height: 16px;
+    width: 16px;
+    line-height:9px;
+    text-align: center;
+    font-size: 1.1em;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background: rgba(0,0,0,.5);
+    z-index: 500000;
+
+}
 
 /*Video player page*/
 .video_player_container {

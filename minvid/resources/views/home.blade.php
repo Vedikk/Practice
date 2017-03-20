@@ -33,11 +33,19 @@
             <h2 class="updates_title_home">Your last updates!</h2>
             <div class="col-md-10 col-md-offset-1 owl-carousel home-carousel owl-theme  ">
                 @foreach($videos as $video)
+                    @if($video->deletedFlag)
+                        @continue
+                    @endif
                     <div class="last_video_home owl-item">
                         <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block">
-                            <a href="{{ $video->id }}"  class="delete_button">xpest</a>
+                            <a href="{{ $video->id }}" class="delete_button">
+                                <span>
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </span>
+                            </a>
                             <img src="{{ $video->screenshot_path }}" alt="last_update_video"
-                                 class="video_thumbnail img-thumbnail img-responsive"> <span class="video_name">{{ $video->video_name }}</span>
+                                 class="video_thumbnail img-thumbnail img-responsive"> <span
+                                    class="video_name">{{ $video->video_name }}</span>
                         </a>
                     </div>
 
@@ -45,7 +53,6 @@
 
             </div>
         </div>
-
-
     </div>
+
 @endsection

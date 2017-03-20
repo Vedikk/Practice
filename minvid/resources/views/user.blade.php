@@ -20,6 +20,9 @@
             <h2 class="updates_title_home">{{ $user->name }} last updates!</h2>
             <div class="col-md-10 col-md-offset-1 owl-carousel home-carousel owl-theme  ">
                 @foreach($videos as $video)
+                    @if($video->deletedFlag)
+                        @continue
+                    @endif
                     <div class="last_video_home owl-item">
                         <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class=" video_link center-block">
                             <img src="{{ ' http://dev.minvid/'.($video->screenshot_path) }}" alt="last_update_video"

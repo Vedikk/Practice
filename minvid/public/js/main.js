@@ -156,15 +156,21 @@ $(document).ready(function () {
     /*delete video ajax*/
     $('.delete_button').on('click', function (e) {
         e.preventDefault();
-        let data = $('.delete_button').attr('href');
+        let curVideo = $(this);
+        let data = curVideo.attr('href');
         deleteVideo();
 
         function deleteVideo() {
             $.ajax({
-                url: 'delete',
-                data: data,
+                type: 'get',
+                url: 'deleteVideo',
+                data: {
+                    id: data
+                },
             }).done(function () {
-                console.log('success', data);
+                console.log('done');
+                curVideo.parent().parent().hide()
+
             })
         }
     })

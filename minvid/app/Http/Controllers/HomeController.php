@@ -29,9 +29,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $videos =Video::where('user_id', Auth::user()->id)
-        ->orderBy('created_at', 'desc')
-        ->get();
+        $videos = Video::where('user_id', Auth::user()->id)
+            ->orderBy('created_at', 'desc')
+            ->get();
 
 
         return view('home', array('videos' => $videos, 'user' => Auth::user()));
@@ -40,14 +40,14 @@ class HomeController extends Controller
     public function uploadAvatar(Request $request)
     {
 
-        if ($request->hasFile('avatar')){
+        if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
             $fileName = md5(time()) . '.' . $avatar->getClientOriginalExtension();
             Image::make($avatar->getRealPath())
-                ->resize(300,300)
+                ->resize(300, 300)
                 ->save(public_path('/avatars/') . $fileName);
-            $user  = Auth::user();
-            $user->avatar=$fileName;
+            $user = Auth::user();
+            $user->avatar = $fileName;
             $user->save();
         }
 
@@ -57,10 +57,13 @@ class HomeController extends Controller
 
     public function deleteVideo(Request $request){
 
-//        if ($request->ajax()){
-            var_dump($request);
-            redirect()->route('index');
-//        }
+        if ($request->ajax()) {
+            $id = $request->id;
+            $video = Video::where('id', $id);
+            $video->update(['deletedFlag' => 1]);
+
+        }
 
     }
+
 }

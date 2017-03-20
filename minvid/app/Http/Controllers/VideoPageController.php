@@ -7,6 +7,7 @@ use App\User;
 use App\Video;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 
 class VideoPageController extends Controller
 {
@@ -38,6 +39,8 @@ class VideoPageController extends Controller
     }
 
 
+/*TODO make page of unknown video*/
+
 
     public function storeComment(Request $request, $id)
     {
@@ -45,12 +48,27 @@ class VideoPageController extends Controller
         $comment = $request->comment;
         $rating = $request->rating;
 
+        /*$rate = new Rating;
+        $rate->user_id = \Auth::user();
+        $rate->video_id = $id;
+        $rate->comment = $comment;
+        $rate->rating = $rating;
+        $rate->save();
+*/
 
-        \DB::table('ratings')->insert(
-            ['comment' => $comment, 'rating' => $rating, 'video_id' => $id, 'user_id' => \Auth::user()->id, 'created_at' => Carbon::now()]
-        );
 
-        return redirect()->back();
+        if(\Auth::guest() ){
+            return redirect('login');
+        }
+
+        else{
+            \DB::table('ratings')->insert(
+                ['comment' => $comment, 'rating' => $rating, 'video_id' => $id, 'user_id' => \Auth::user()->id, 'created_at' => Carbon::now()]
+            );
+
+            return redirect()->back();
+        }
+
     }
 
 }

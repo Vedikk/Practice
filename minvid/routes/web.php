@@ -15,6 +15,7 @@ Route::get('/', 'IndexController@index')->name('index');
 
 Auth::routes();
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('add-video', 'VideoController@add')->name('addVideo');
@@ -32,5 +33,6 @@ Route::get('users', 'AllUsersController@show')->name('allUsers');
 
 Route::get('r', 'IndexController@byRating')->name('sortByRating');
 
-Route::get('delete', 'HomeController@deleteVideo')->name('deleteVideo');
+Route::get('deleteVideo', 'HomeController@deleteVideo');
+
 

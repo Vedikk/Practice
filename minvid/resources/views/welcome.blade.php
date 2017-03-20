@@ -10,6 +10,9 @@
         <h1 class="welcome_tittle"> Check out last updates!</h1>
         <div class=" infinite-scroll ">
             @foreach($videos as $video)
+                @if($video->deletedFlag)
+                    @continue
+                @endif
                 <div class="col-lg-3 col-md-4 col-sm-6 ">
                     <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block"
                        title="{{ $video->video_name }}">

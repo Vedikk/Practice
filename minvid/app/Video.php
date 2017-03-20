@@ -10,7 +10,7 @@ class Video extends Model
 {
 
 
-    protected $fillable = array('video_name', 'user_id', 'path', 'screenshot_path', 'short_name');
+    protected $fillable = array('video_name', 'user_id', 'path', 'screenshot_path', 'short_name', 'deletedFlag');
 
     public function rating(){
         return Rating::where('video_id', $this->id)->first();

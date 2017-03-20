@@ -15,8 +15,8 @@
     {{--Owl carousel vv  --}}
     <link href="{{ asset('css/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/owl.theme.default.min.css') }}" rel="stylesheet">
+    {{--font awesome vv--}}
     <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/theme.min.css') }}" media="all" rel="stylesheet" type="text/css">
     {{-- auto generated css , include bootstrap--}}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
