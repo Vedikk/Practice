@@ -22,7 +22,9 @@ class IndexController extends Controller
 
     public function byRating(){
 
-        $videos = Video::leftJoin('ratings', 'videos.id', '=', 'video_id')
+
+
+        $videos = Video::leftJoin('ratings', 'videos.id', '=', 'ratings.video_id')
             ->select(array('videos.*',
                 \DB::raw('AVG(ratings.rating) as ratings_average')
             ))

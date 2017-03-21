@@ -37,20 +37,44 @@
                         @continue
                     @endif
                     <div class="last_video_home owl-item">
-                        <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block">
-                            <a href="{{ $video->id }}" class="delete_button">
+                        <a href="{{ $video->id }}" class="delete_button">
                                 <span>
                                     <i class="fa fa-times" aria-hidden="true"></i>
                                 </span>
-                            </a>
+                        </a>
+                        <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block">
                             <img src="{{ $video->screenshot_path }}" alt="last_update_video"
                                  class="video_thumbnail img-thumbnail img-responsive"> <span
                                     class="video_name">{{ $video->video_name }}</span>
                         </a>
                     </div>
-
                 @endforeach
-
+            </div>
+        </div>
+        <div class="trash_cont_home container">
+            <p class="trash_p">
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                Your trash
+            </p>
+            <div class="trash_carousel_cont_home">
+                <div class="trash_body_home col-md-10 col-md-offset-1 owl-carousel home-carousel owl-theme">
+                    @foreach($videos as $video)
+                        @if($video->deletedFlag ==1)
+                            <div class="last_video_home owl-item">
+                                <a href="{{ $video->id }}" class="return_button">
+                                        <span>
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </span>
+                                </a>
+                                <a href="{{ route('videoPage', ['id'=>$video->id]) }}" class="video_link center-block">
+                                    <img src="{{ $video->screenshot_path }}" alt="last_update_video"
+                                         class="video_thumbnail img-thumbnail img-responsive"> <span
+                                            class="video_name">{{ $video->video_name }}</span>
+                                </a>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

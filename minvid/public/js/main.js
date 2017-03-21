@@ -30,6 +30,7 @@ $(document).ready(function () {
         responsiveClass: true,
         nav: true,
         dots: true,
+        dragable:false,
         responsive: {
             0: {
                 touchDrag: true,
@@ -158,6 +159,7 @@ $(document).ready(function () {
         e.preventDefault();
         let curVideo = $(this);
         let data = curVideo.attr('href');
+        let parentVideo = curVideo.parent().parent();
         deleteVideo();
 
         function deleteVideo() {
@@ -168,11 +170,35 @@ $(document).ready(function () {
                     id: data
                 },
             }).done(function () {
-                console.log('done');
-                curVideo.parent().parent().hide()
+                parentVideo.hide();
 
             })
         }
-    })
+    });
 
+    /*return video*/
+    $('.return_button').on('click', function (e) {
+        e.preventDefault();
+        let curVideo = $(this);
+        let data = curVideo.attr('href');
+        let parentVideo = curVideo.parent().parent();
+        returnVideo();
+
+        function returnVideo() {
+            $.ajax({
+                type:'get',
+                url: 'returnVideo',
+                data:{
+                    id: data
+                },
+            }).done(function () {
+                parentVideo.hide();
+            })
+        }
+    });
+
+    /*home trash visibility*/
+    $('.trash_p').on('click', function () {
+        $('.trash_carousel_cont_home').slideToggle('slow');
+    })
 });

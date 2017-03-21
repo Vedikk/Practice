@@ -34,5 +34,6 @@ Route::get('users', 'AllUsersController@show')->name('allUsers');
 Route::get('r', 'IndexController@byRating')->name('sortByRating');
 
 Route::get('deleteVideo', 'HomeController@deleteVideo');
+Route::get('returnVideo', 'HomeController@returnVideo');
 
 

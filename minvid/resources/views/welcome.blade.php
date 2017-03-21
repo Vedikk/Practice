@@ -24,8 +24,15 @@
                         <p>
                             <input class="kv-ltr-theme-fa-alt rating-loading welcome_video_rating"
                                    value="{{ $video->ratingAvg() }}">
-                            <span class="desc_span_welcome"> Added by: <a
-                                        href="{{ route('UserPage', ['id'=> $video->user_id]) }}">{{ $video->user()->name }}</a> {{ $video->created_at}}</span>
+                            <span class="desc_span_welcome">
+                                <a href="{{ route('UserPage', ['id'=> $video->user_id]) }}">
+                                    {{ $video->user()->name }}
+                                </a>
+                                {{ $video->created_at}}
+                                {{--<br>--}}
+                                <i class="fa fa-eye" aria-hidden="true"></i> {{ $video->viewsCounter }}
+                                <i class="fa fa-comments-o" aria-hidden="true"></i> {{ $video->commentsCount() }}
+                            </span>
                             <br>
 
                         </p>

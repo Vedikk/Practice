@@ -61,6 +61,9 @@ a.dropdown-toggle {
     min-width: 160px;
 }
 
+.video_thumbnail{
+    height: 152px !important;
+}
 .video_thumbnail:hover{
     transform: scale(1.02);
     opacity: 0.9;
@@ -122,13 +125,14 @@ a.dropdown-toggle {
     margin: 0 auto;
     display: block;
 }
-.delete_button{
+.delete_button,
+.return_button{
     position: absolute;
     right:6px;
     top: 5px;
-    height: 16px;
-    width: 16px;
-    line-height:9px;
+    height: 20px;
+    width: 20px;
+    line-height:20px;
     text-align: center;
     font-size: 1.1em;
     -webkit-border-radius:50%;
@@ -136,7 +140,23 @@ a.dropdown-toggle {
     border-radius:50%;
     background: rgba(0,0,0,.5);
     z-index: 500000;
-
+}
+.trash_cont_home{
+    margin-top: 30px;
+}
+.trash_p{
+    width: 150px;
+    margin: 0 auto;
+    font-size: 1.5em;
+    cursor: pointer;
+    text-align: center;
+}
+.trash_carousel_cont_home{
+    display: none;
+}
+.fa-times,
+.fa-plus{
+    color: #ddd;
 }
 
 /*Video player page*/
@@ -197,6 +217,7 @@ a.dropdown-toggle {
 .sortBy_welcome{
     display: block;
     text-align: right;
+    margin-bottom:30px;
 
 }
 .video_descript_welcome,
@@ -209,7 +230,7 @@ a.dropdown-toggle {
     text-align: center;
 }
 .video_descript_welcome .desc_span_welcome{
-    font-size: 0.74em;
+    font-size: 0.8em;
 }
 .infinite-scroll{
     padding-left:0;

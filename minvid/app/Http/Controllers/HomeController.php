@@ -66,4 +66,13 @@ class HomeController extends Controller
 
     }
 
+    public function returnVideo(Request $request){
+
+        if ($request->ajax()){
+            $id = $request->id;
+            $video = Video::where('id', $id);
+            $video->update(['deletedFlag' =>0]);
+        }
+    }
+
 }

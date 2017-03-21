@@ -23,6 +23,10 @@ class Video extends Model
     public function user(){
         return User::where('id', $this->user_id)->first();
     }
+    public function commentsCount(){
+        $count = Rating::where('video_id', $this->id)->count();
+        return $count;
+    }
 
     const UPDATED_AT = 'updated_at';
     const CREATED_AT = 'created_at';

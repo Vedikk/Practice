@@ -57,7 +57,7 @@ class VideoController extends Controller
         $frame->save( $frame_name);
 
         /*resize frame*/
-        Image::make($frame_name)->resize(340,200)->save($frame_name);
+        Image::make($frame_name)->resize(640,360)->save($frame_name);
 
         /*give name to video, and move it to server*/
         $extension = $file_path->getClientOriginalExtension();

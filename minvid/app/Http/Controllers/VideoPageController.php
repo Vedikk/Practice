@@ -23,13 +23,15 @@ class VideoPageController extends Controller
         $rating = $this->rating->where('video_id', $id)->latest('created_at')->paginate(5);
         $video = Video::where('id', $id)->first();
 
-        if ($request->ajax()) {
+        if ($request->ajax()) { //ajax video comments pagination
             return view('videoPage.videoComments',
                 array(
                     'rating' => $rating,
                     'video'=>$video,
                 ))->render();
         }
+
+        $video->increment('viewsCounter'); //incrementing views counter
 
 
         return view('videoPage.video', array(
@@ -47,15 +49,6 @@ class VideoPageController extends Controller
 
         $comment = $request->comment;
         $rating = $request->rating;
-
-        /*$rate = new Rating;
-        $rate->user_id = \Auth::user();
-        $rate->video_id = $id;
-        $rate->comment = $comment;
-        $rate->rating = $rating;
-        $rate->save();
-*/
-
 
         if(\Auth::guest() ){
             return redirect('login');
