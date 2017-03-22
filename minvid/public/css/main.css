@@ -19,8 +19,6 @@ a:hover{
 .pic404 {
     display: block;
     margin: 0 auto;
-    width: 100vw;
-    /*height: 75vh;*/
 }
 .sub_message404{
     text-align: center;
@@ -221,7 +219,7 @@ a.dropdown-toggle {
 
 }
 .video_descript_welcome,
-.welcome_tittle {
+.welcome_title {
     display: block;
     margin-top: 5px;
     font-family: 'Raleway', sans-serif;
@@ -265,6 +263,13 @@ a.dropdown-toggle {
 
 .user_block_all_users:hover .user_name_all_users{
     display: block;
+}
+
+/*Missing Video*/
+
+.pic_missing_video{
+    height: 360px;
+    margin: 30px auto;
 }
 
 

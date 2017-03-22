@@ -23,7 +23,19 @@ class VideoPageController extends Controller
         $rating = $this->rating->where('video_id', $id)->latest('created_at')->paginate(5);
         $video = Video::where('id', $id)->first();
 
-        if ($request->ajax()) { //ajax video comments pagination
+        if ($video === null || ($video->deletedFlag == 1 && (  \Auth::guest() || \Auth::user()->id != $video->user_id))){
+
+            $videos = Video::orderBy('created_at', 'desc')
+                ->where('deletedFlag', 0)
+                ->take(8)
+                ->get();
+
+            return view('missing_video', array(
+                'videos' => $videos
+            ));
+        }
+
+        elseif ($request->ajax()) { //ajax video comments pagination
             return view('videoPage.videoComments',
                 array(
                     'rating' => $rating,
@@ -39,9 +51,6 @@ class VideoPageController extends Controller
             'video'=>$video,
         ));
     }
-
-
-/*TODO make page of unknown video*/
 
 
     public function storeComment(Request $request, $id)

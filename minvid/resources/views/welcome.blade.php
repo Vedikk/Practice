@@ -7,7 +7,7 @@
             <span>Sort by:</span>
             <a href="{{route('index')}}">Date</a> | <a href="{{route('sortByRating')}}">Rating</a>
         </div>
-        <h1 class="welcome_tittle"> Check out last updates!</h1>
+        <h1 class="welcome_title"> Check out last updates!</h1>
         <div class=" infinite-scroll ">
             @foreach($videos as $video)
                 @if($video->deletedFlag)
@@ -29,7 +29,6 @@
                                     {{ $video->user()->name }}
                                 </a>
                                 {{ $video->created_at}}
-                                {{--<br>--}}
                                 <i class="fa fa-eye" aria-hidden="true"></i> {{ $video->viewsCounter }}
                                 <i class="fa fa-comments-o" aria-hidden="true"></i> {{ $video->commentsCount() }}
                             </span>
