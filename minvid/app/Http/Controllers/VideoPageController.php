@@ -23,7 +23,7 @@ class VideoPageController extends Controller
         $rating = $this->rating->where('video_id', $id)->latest('created_at')->paginate(5);
         $video = Video::where('id', $id)->first();
 
-        if ($video === null || ($video->deletedFlag == 1 && (  \Auth::guest() || \Auth::user()->id != $video->user_id))){
+        if ($video === null || ($video->deletedFlag == 1 && (\Auth::guest() || \Auth::user()->id != $video->user_id))) {
 
             $videos = Video::orderBy('created_at', 'desc')
                 ->where('deletedFlag', 0)
@@ -33,13 +33,11 @@ class VideoPageController extends Controller
             return view('missing_video', array(
                 'videos' => $videos
             ));
-        }
-
-        elseif ($request->ajax()) { //ajax video comments pagination
+        } elseif ($request->ajax()) { //ajax video comments pagination
             return view('videoPage.videoComments',
                 array(
                     'rating' => $rating,
-                    'video'=>$video,
+                    'video' => $video,
                 ))->render();
         }
 
@@ -47,8 +45,8 @@ class VideoPageController extends Controller
 
 
         return view('videoPage.video', array(
-            'rating'=> $rating,
-            'video'=>$video,
+            'rating' => $rating,
+            'video' => $video,
         ));
     }
 
@@ -59,11 +57,9 @@ class VideoPageController extends Controller
         $comment = $request->comment;
         $rating = $request->rating;
 
-        if(\Auth::guest() ){
+        if (\Auth::guest()) {
             return redirect('login');
-        }
-
-        else{
+        } else {
             \DB::table('ratings')->insert(
                 ['comment' => $comment, 'rating' => $rating, 'video_id' => $id, 'user_id' => \Auth::user()->id, 'created_at' => Carbon::now()]
             );

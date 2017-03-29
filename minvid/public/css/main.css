@@ -125,6 +125,7 @@ a.dropdown-toggle {
 }
 .delete_button,
 .return_button{
+    display: block;
     position: absolute;
     right:6px;
     top: 5px;
@@ -228,7 +229,7 @@ a.dropdown-toggle {
     text-align: center;
 }
 .video_descript_welcome .desc_span_welcome{
-    font-size: 0.8em;
+    font-size: 0.81em;
 }
 .infinite-scroll{
     padding-left:0;
